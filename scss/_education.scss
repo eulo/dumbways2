@@ -1,0 +1,29 @@
+#education{
+	background: #526373;
+	text-align: center;
+	h2{
+		position: relative;
+		margin: 0 auto;
+		background: url(../images/safety_title.png) no-repeat;
+		@include scale_bg(290,111,1);
+		margin-bottom: 40px;
+	}
+	p{
+		max-width: 640px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+	ul.saftey_tips{
+		list-style: none;
+		max-width: 960px;
+		margin: 0 auto;
+		padding-left: 20px;
+		li{
+			display: inline-block;
+			width: 335px;
+			padding-left: 100px;
+			margin-right: 40px;
+			background: url(../images/safety_bubble.png) no-repeat center left;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+#videos{
+    width: 100%;
+    min-height: 1590px;
+    background: url(../images/videos_bg.png) no-repeat center bottom #95be57;
+    #vidplayer{
+    	background: url(../images/vid_player_bg.png) no-repeat center center;
+        @include scale_bg(1087,686,1);
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .vid_links{
+    	background: url(../images/vid_thumbs.png) no-repeat center center;
+        @include scale_bg(923,157,1);
+        margin: 0 auto;
+        position: relative;
+        top: 60px;
+        left: -12px;
+        .vids{
+        	@include navigation-list;
+        }
+    }
+}

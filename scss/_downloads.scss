@@ -1,0 +1,63 @@
+#downloads{
+	text-align: center;
+	background: #c6dee5;
+	position: relative;
+	.snow_mountains{
+		width: 100%;
+		background: url(../images/blue_mountains.png) no-repeat center top;
+		height: 600px;
+		top: -233px;
+		position: absolute;
+	}
+	.mount_right{
+		background: url(../images/tunnel-track.png) no-repeat right center;
+		width: 100%;
+		height: 274px;
+		position: absolute;
+		top: -180px;
+	}
+	.mount_left{
+		background: url(../images/mountains-foreground.png) no-repeat left center;
+		height: 477px;
+		width: 100%;
+		position: absolute;
+		top: -250px;
+
+	}
+	.content{
+		max-width: 1200px;
+		margin: 0 auto;
+		padding-top: 270px;
+		color: $black;
+		h2{
+			background: url(../images/download_title.png) no-repeat;
+			@include scale_bg(310,108,1);
+			margin: 0 auto;
+		}
+		.dl_slideshow{
+			background: url(../images/iceblock-bg.png) no-repeat;
+			@include scale_bg(1038,228,1);
+			margin: 0 auto 50px;
+
+		}
+		.slider{
+			@include navigation-list;
+		}
+		.sc_appstore{
+			width: 100%;
+			max-width: 1038px;
+			margin: 0 auto;
+			.soundcloud{
+				float: left;
+				background: url(../images/soundcloud-bg.png) no-repeat center bottom;
+				width: 500px;
+				padding: 38px 50px;
+			}
+			.old_app{
+				float: right;
+				background: url(../images/appicon-bg.png) no-repeat center bottom;
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,65 @@
+#leaderboard {
+	background: #fbefc3;
+    width: 100%;
+    padding-bottom: 330px;
+    position: relative;
+	.sand_top{
+		background: url(../images/sand_top_bg.png) no-repeat center top;
+		position: relative;
+		top: -100px;
+		height: 500px;
+	}
+	.board{
+		width: 1224px;
+		margin: 0 auto;
+		background: url(../images/leaderboard_bg_mid.png) repeat-y;
+		.top{
+			background: url(../images/leaderboard_bg_head.png) no-repeat center top;
+			width: 100%;
+			height: 133px;
+			background-size: contain;
+			position: relative;
+			top: -90px;
+		}
+		.content{
+			text-align: center;
+			color: $black;
+			margin-top: -100px;
+			p{
+				font-size: em(20);
+			}
+			h3{
+				font-size: em(24);
+			}
+			.applinks{
+				padding-bottom: 0;
+				margin-bottom: -40px;
+			}
+			.coming_soon{
+				width: 419px;
+				height: 295px;
+				background: url(../images/leaderboard_coming_soon.png) no-repeat;
+				margin: 0 auto;
+				position: relative;
+				span{
+					font-family: $bold;
+					font-size: em(54);
+					line-height: 1;
+					color: $white;
+					display: block;
+					position: relative;
+					top: 120px;
+					@include vendor-prefix(transform, rotate(5deg))
+				}
+			}
+		}
+		.bottom{
+			background: url(../images/leaderboard_bg_base.png) no-repeat center top;
+			width: 100%;
+			height: 133px;
+			background-size: contain;
+			position: relative;
+			bottom: -90px;
+		}
+	}
+}
