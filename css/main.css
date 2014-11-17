@@ -597,6 +597,49 @@ body {
           padding-left: 100px;
           margin-right: 40px;
           background: url(../images/safety_bubble.png) no-repeat center left; }
+    body #page #shop {
+      width: 100%;
+      position: relative;
+      background: #f3efad;
+      padding-top: 500px; }
+      body #page #shop .sandcastle {
+        width: 100%;
+        height: 229px;
+        background: url(../images/sand-top.png) no-repeat center bottom;
+        position: absolute;
+        top: -229px; }
+      body #page #shop .shop_mountains {
+        width: 100%;
+        background: #95be57;
+        position: relative;
+        height: 600px;
+        z-index: 0; }
+        body #page #shop .shop_mountains .hills {
+          background: url(../images/hills-bg.png) no-repeat center bottom;
+          position: absolute;
+          top: -490px;
+          height: 610px;
+          width: 100%; }
+        body #page #shop .shop_mountains .content {
+          width: 100%;
+          text-align: center;
+          z-index: 10;
+          position: relative;
+          top: -400px; }
+          body #page #shop .shop_mountains .content .shop_tent {
+            width: 100%;
+            max-width: 1288px;
+            height: 702px;
+            background: url(../images/shop-tent.png) no-repeat center bottom;
+            background-size: 100% auto;
+            margin: 0 auto; }
+    body #page footer {
+      background: url(../images/footerbg.png) no-repeat;
+      padding-top: 60px;
+      height: 500px; }
+      body #page footer .foot_links {
+        max-width: 1200px;
+        margin: 0 auto; }
   body .applinks {
     width: 700px;
     padding: 40px;
