@@ -1,7 +1,9 @@
 #intro{
+    max-width: 1600px;
     background: url(../images/bg_clouds.png) no-repeat fixed center top #96d2f9;
     background-size: 100% auto;
     min-height: 800px;
+    position: relative;
     .mountain_bg{
         max-width: 1600px;
         width: 100%;
@@ -10,15 +12,19 @@
         .left{
             background: url(../images/bg_mountains_left.png);
             @include scale_bg(439,383,1);
-            @include respond-to(1150){
-                @include scale_bg(439,383,.7);
+            position: absolute;
+            left: 0px;
+            @include respond-to(768) {
+                @include scale_bg(439,383,.5); 
             }
         }
         .right{
             background: url(../images/bg_mountains_right.png);
+            position: absolute;
+            right: 0px;
             @include scale_bg(586,383,1);
-            @include respond-to(1150){
-                @include scale_bg(586,383,.7);
+            @include respond-to(768) {
+                @include scale_bg(586,383,.5);
             }
         }
     }
@@ -27,6 +33,9 @@
         background: url(../images/foreground.png) no-repeat center bottom;
         height: 700px;
         padding-top: 100px;
+        @include respond-to(768) {
+            background-size: 100% auto;
+        }
         h1{ 
             margin: 0 auto;
             background: url(../images/dwtd_logo.png) no-repeat center center;
@@ -38,6 +47,9 @@
             background: url(../images/station.png) no-repeat center center;
             margin: 0 auto;
             position: relative;
+            @include respond-to(768) {
+                @include scale_bg(465,284,.5);
+            }
             .play_vid{
                 display: block;
                 color: $white;
@@ -61,6 +73,9 @@
             background: url(../images/platform.png) no-repeat center right;
             background-size: contain;
             margin: 0 auto;
+            @include respond-to(1024) {
+                width: 1024px;
+            }
             .pledge{
                 text-decoration: none;
                 color: $grey_text;
