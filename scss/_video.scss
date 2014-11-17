@@ -11,13 +11,31 @@
 
     .vid_links{
     	background: url(../images/vid_thumbs.png) no-repeat center center;
-        @include scale_bg(923,157,1);
-        margin: 0 auto;
-        position: relative;
-        top: 60px;
-        left: -12px;
-        .vids{
-        	@include navigation-list;
-        }
+      @include scale_bg(923,157,1);
+      margin: 0 auto;
+      position: relative;
+      top: 60px;
+      left: -12px;
+      .vids{
+        @include navigation-list;
+      }
+
+      .next {
+        position: absolute;
+        right: 62px;
+        top: 70px;
+        -webkit-transform: rotate(5deg);
+        -moz-transform: rotate(5deg);
+        transform: rotate(5deg);
+      }
+      .prev {
+        position:absolute;
+        top: 69px;
+        left: 57px;
+        -webkit-transform: rotate(5deg);
+        -moz-transform: rotate(5deg);
+        transform: rotate(5deg);
+      }
+  
     }
 }

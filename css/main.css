@@ -401,6 +401,20 @@ body {
             float: left; }
             body #page #videos .vid_links .vids > li:last-child {
               margin-right: 0px; }
+        body #page #videos .vid_links .next {
+          position: absolute;
+          right: 62px;
+          top: 70px;
+          -webkit-transform: rotate(5deg);
+          -moz-transform: rotate(5deg);
+          transform: rotate(5deg); }
+        body #page #videos .vid_links .prev {
+          position: absolute;
+          top: 69px;
+          left: 57px;
+          -webkit-transform: rotate(5deg);
+          -moz-transform: rotate(5deg);
+          transform: rotate(5deg); }
     body #page #leaderboard {
       background: #fbefc3;
       width: 100%;
@@ -500,12 +514,23 @@ body {
           background-size: cover;
           width: 1038px;
           height: 228px;
+          position: relative;
           margin: 0 auto 50px; }
+          body #page #downloads .content .dl_slideshow .next {
+            position: absolute;
+            top: 90px;
+            right: 0; }
+          body #page #downloads .content .dl_slideshow .prev {
+            position: absolute;
+            top: 90px;
+            left: -5px; }
         body #page #downloads .content .slider {
           list-style-type: none;
           padding: 0;
           margin: 0;
-          overflow: hidden; }
+          overflow: hidden;
+          height: 100%;
+          margin: 0 80px; }
           body #page #downloads .content .slider > li {
             display: block;
             float: left; }

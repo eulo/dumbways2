@@ -40,11 +40,25 @@
 		.dl_slideshow{
 			background: url(../images/iceblock-bg.png) no-repeat;
 			@include scale_bg(1038,228,1);
+      position:relative;
 			margin: 0 auto 50px;
+
+      .next {
+        position:absolute;
+        top:90px;
+        right:0;
+      }
+      .prev {
+        position:absolute;
+        top:90px;
+        left:-5px;
+      }
 
 		}
 		.slider{
 			@include navigation-list;
+      height: 100%;
+      margin: 0 80px;
 		}
 		.sc_appstore{
 			width: 100%;
