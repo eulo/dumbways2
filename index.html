@@ -30,7 +30,7 @@
         <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
 
         <link rel="stylesheet" href="css/main.min.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="bower_components/modernizr/modernizr.js"></script>
     </head>
     <body>
     
@@ -242,39 +242,18 @@
                 </div>
             </div>
             <footer>
+
                 <div class="tracks">
                 </div>
                 <div class="foot_links">
                     <span class="left">&copy; metro trains</span>
                     <span class="right"><a href="#" target="_blank">terms and conditions</a>
                 </div>
+
             </footer>
         </div>
 
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/main.min.js"></script>
-
-        <script type="text/javascript">
-            $(function () {
-                $('#subForm').submit(function (e) {
-                    e.preventDefault();
-                    $.getJSON(
-                    this.action + "?callback=?",
-                    $(this).serialize(),
-                    function (data) {
-                        if (data.Status === 400) {
-                            alert("Error: " + data.Message);
-                        } else { // 200
-                            alert("Thank you, your email has been added to our list. You’ll be one of the first to receive updates regarding our online shop.");
-                            //alert("Success: " + data.Message);
-                        }
-                    });
-                });
-            });
-        </script>
-
+        <script data-main="js/main" src="bower_components/requirejs/require.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script type="text/javascript">
