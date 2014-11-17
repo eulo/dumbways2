@@ -318,6 +318,27 @@ body{
         top: 0px;
         z-index: 1000;
     }
+    a.prev,
+    a.next{
+        @include share_button(#ffc228,#ffe273);
+        width: 40px;
+        height: 40px;
+        display: block;
+        line-height: 40px;
+        border-radius: 14px;
+        display: block;
+        padding: 0 14px;
+        overflow: hidden;
+        text-indent: -9999px;
+    }
+    a.prev{
+        background: url(../images/arrow-left.png) no-repeat center center #ffc228;
+        background-size: 50% auto;
+    }
+    a.next{
+        background: url(../images/arrow.png) no-repeat center center #ffc228;
+        background-size: 50% auto;
+    }
 
     #page{
         max-width: 1600px;

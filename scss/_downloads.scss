@@ -25,10 +25,13 @@
 
 	}
 	.content{
+		position: relative;
 		max-width: 1200px;
 		margin: 0 auto;
-		padding-top: 270px;
+		padding-top: 90px;
+		top: 180px;
 		color: $black;
+		z-index: 1;
 		h2{
 			background: url(../images/download_title.png) no-repeat;
 			@include scale_bg(310,108,1);
@@ -56,8 +59,26 @@
 			.old_app{
 				float: right;
 				background: url(../images/appicon-bg.png) no-repeat center bottom;
+				padding-top: 38px;
+				.app_dl_link{
+					margin-top: 10px;
+				}
+			}
+			.app_icon{
+				background: url(../images/old_icon.png) no-repeat;
+				@include scale_bg(100,100,1);
+				position: relative;
+				margin: 20px auto;
 			}
 		}
 		
+	}
+	.ice_shelf{
+		background: url(../images/iceshelf-bg.png) no-repeat center center;
+		width: 100%;
+		position: relative;
+		bottom: -112px;
+		height: 150px;
+		z-index: 0;
 	}
 }
