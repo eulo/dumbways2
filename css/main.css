@@ -224,6 +224,55 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
     top: 0px;
     z-index: 1000; }
+  body a.prev, body a.next {
+    background-color: #ffc228;
+    -webkit-box-shadow: 0px 8px 0px rgba(0,0,0,0.3), 0px -5px 0px #ffe273;
+    -ms-box-shadow: 0px 8px 0px rgba(0,0,0,0.3), 0px -5px 0px #ffe273;
+    -moz-box-shadow: 0px 8px 0px rgba(0,0,0,0.3), 0px -5px 0px #ffe273;
+    -o-box-shadow: 0px 8px 0px rgba(0,0,0,0.3), 0px -5px 0px #ffe273;
+    box-shadow: 0px 8px 0px rgba(0,0,0,0.3), 0px -5px 0px #ffe273;
+    -webkit-transition: -webkit-transform .3s, box-shadow .3s;
+    -ms-transition: -ms-transform .3s, box-shadow .3s;
+    -moz-transition: -moz-transform .3s, box-shadow .3s;
+    -o-transition: -o-transform .3s, box-shadow .3s;
+    transition: transform .3s, box-shadow .3s;
+    width: 40px;
+    height: 40px;
+    display: block;
+    line-height: 40px;
+    border-radius: 14px;
+    display: block;
+    padding: 0 14px;
+    overflow: hidden;
+    text-indent: -9999px; }
+    body a.prev:hover, body a.next:hover {
+      -webkit-transform: translate(0,-2px);
+      -ms-transform: translate(0,-2px);
+      -moz-transform: translate(0,-2px);
+      -o-transform: translate(0,-2px);
+      transform: translate(0,-2px);
+      -webkit-box-shadow: 0px 7px 0px rgba(0,0,0,0.3), 0px -3px 0px #ffe273;
+      -ms-box-shadow: 0px 7px 0px rgba(0,0,0,0.3), 0px -3px 0px #ffe273;
+      -moz-box-shadow: 0px 7px 0px rgba(0,0,0,0.3), 0px -3px 0px #ffe273;
+      -o-box-shadow: 0px 7px 0px rgba(0,0,0,0.3), 0px -3px 0px #ffe273;
+      box-shadow: 0px 7px 0px rgba(0,0,0,0.3), 0px -3px 0px #ffe273; }
+    body a.prev:active, body a.next:active {
+      -webkit-transform: translate(0,-4px);
+      -ms-transform: translate(0,-4px);
+      -moz-transform: translate(0,-4px);
+      -o-transform: translate(0,-4px);
+      transform: translate(0,-4px);
+      -webkit-box-shadow: 0px 6px 0px rgba(0,0,0,0.3), 0px -1px 0px #ffe273;
+      -ms-box-shadow: 0px 6px 0px rgba(0,0,0,0.3), 0px -1px 0px #ffe273;
+      -moz-box-shadow: 0px 6px 0px rgba(0,0,0,0.3), 0px -1px 0px #ffe273;
+      -o-box-shadow: 0px 6px 0px rgba(0,0,0,0.3), 0px -1px 0px #ffe273;
+      box-shadow: 0px 6px 0px rgba(0,0,0,0.3), 0px -1px 0px #ffe273; }
+  body a.prev {
+    background: url(../images/arrow-left.png) no-repeat center center #ffc228;
+    background-size: 50% auto; }
+  body a.next {
+    background: url(../images/arrow.png) no-repeat center center #ffc228;
+    background-size: 50% auto; }
   body #page {
     max-width: 1600px;
     margin: 0 auto; }
@@ -433,10 +482,13 @@ body {
         position: absolute;
         top: -250px; }
       body #page #downloads .content {
+        position: relative;
         max-width: 1200px;
         margin: 0 auto;
-        padding-top: 270px;
-        color: #383637; }
+        padding-top: 90px;
+        top: 180px;
+        color: #383637;
+        z-index: 1; }
         body #page #downloads .content h2 {
           background: url(../images/download_title.png) no-repeat;
           background-size: cover;
@@ -470,10 +522,33 @@ body {
             padding: 38px 50px; }
           body #page #downloads .content .sc_appstore .old_app {
             float: right;
-            background: url(../images/appicon-bg.png) no-repeat center bottom; }
+            background: url(../images/appicon-bg.png) no-repeat center bottom;
+            padding-top: 38px; }
+            body #page #downloads .content .sc_appstore .old_app .app_dl_link {
+              margin-top: 10px; }
+          body #page #downloads .content .sc_appstore .app_icon {
+            background: url(../images/old_icon.png) no-repeat;
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            margin: 20px auto; }
+      body #page #downloads .ice_shelf {
+        background: url(../images/iceshelf-bg.png) no-repeat center center;
+        width: 100%;
+        position: relative;
+        bottom: -112px;
+        height: 150px;
+        z-index: 0; }
     body #page #education {
-      background: #526373;
-      text-align: center; }
+      background: #526373 url(../images/underwater-bg.png) no-repeat center bottom;
+      background-size: 100% auto;
+      text-align: center;
+      padding-bottom: 400px; }
+      body #page #education .water_top {
+        background: #3c4856 url(../images/water-top.png) no-repeat center bottom;
+        width: 100%;
+        height: 300px; }
       body #page #education h2 {
         position: relative;
         margin: 0 auto;
