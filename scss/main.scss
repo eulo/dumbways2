@@ -356,6 +356,16 @@ body{
 
         @import "shop";
 
+        footer{
+            background: url(../images/footerbg.png) no-repeat;
+            padding-top: 60px;
+            height: 500px;
+            .foot_links{
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+        }
+
     }
 
     //misc styles
