@@ -2,7 +2,7 @@ require(['config'], function() {
     require(['app'], function() {
 
       require([
-        'src/events'
+        'src/binds'
       ]);
 
 
