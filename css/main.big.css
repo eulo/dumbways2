@@ -3693,13 +3693,23 @@ body {
         position: relative;
         top: -100px;
         height: 500px; }
-        body #page #leaderboard .sand_top .character.whale {
-          position: absolute;
-          right: 0;
-          bottom: 0; }
-          @media only screen and (max-width: 767px) {
-            body #page #leaderboard .sand_top .character.whale {
-              right: -100px; } }
+        body #page #leaderboard .sand_top .character {
+          position: absolute; }
+          body #page #leaderboard .sand_top .character.whale {
+            right: 0;
+            bottom: 0; }
+            @media only screen and (max-width: 767px) {
+              body #page #leaderboard .sand_top .character.whale {
+                right: -100px; } }
+          body #page #leaderboard .sand_top .character.flag02 {
+            top: -100px; }
+            body #page #leaderboard .sand_top .character.flag02.left-flag {
+              left: 20%; }
+            body #page #leaderboard .sand_top .character.flag02.right-flag {
+              right: 20%; }
+          body #page #leaderboard .sand_top .character.pool {
+            left: 30%;
+            top: 0; }
       body #page #leaderboard .board {
         width: 1224px;
         margin: 0 auto;
@@ -4057,6 +4067,21 @@ body {
           z-index: 10;
           position: relative;
           top: -400px; }
+          body #page #shop .shop_mountains .content .character {
+            position: absolute; }
+            body #page #shop .shop_mountains .content .character.flag01 {
+              bottom: 250px;
+              z-index: -1; }
+              body #page #shop .shop_mountains .content .character.flag01.flag-first {
+                left: 20px; }
+              body #page #shop .shop_mountains .content .character.flag01.flag-second {
+                left: 20%;
+                bottom: 400px; }
+              body #page #shop .shop_mountains .content .character.flag01.flag-third {
+                right: 20%;
+                bottom: 400px; }
+              body #page #shop .shop_mountains .content .character.flag01.flag-fourth {
+                right: 20px; }
           body #page #shop .shop_mountains .content .shop_tent {
             width: 100%;
             max-width: 1288px;

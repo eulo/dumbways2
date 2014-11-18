@@ -29,6 +29,31 @@
 			z-index: 10;
 			position: relative;
 			top: -400px;
+
+      .character {
+        position: absolute;
+
+        &.flag01 {
+          bottom: 250px;
+          z-index:-1;
+
+          &.flag-first {
+            left:20px;
+          }
+          &.flag-second {
+            left:20%;
+            bottom: 400px;
+          }
+          &.flag-third {
+            right:20%;
+            bottom: 400px;
+          }
+          &.flag-fourth {
+            right:20px;
+          }
+        }
+      }
+
 			.shop_tent{
 				width: 100%;
 				max-width: 1288px;

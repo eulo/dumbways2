@@ -12,6 +12,9 @@ define(function(require, exports, module) {
       , pos = 0
       , dir = true;
 
+    if ($this.css('display') === 'none')
+      return;
+
     $this.css({
       'background-image': 'url(' + data.file + ')',
       'width': data.width + 'px',

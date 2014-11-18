@@ -11,13 +11,29 @@
 		position: relative;
 		top: -100px;
 		height: 500px;
-	    .character.whale {
-	      position:absolute;
-	      right: 0;
-	      @include respond-to($med) {
-		      right:-100px;
-		  }
-	      bottom:0;
+	    .character {
+        position:absolute;
+        &.whale {
+          right: 0;
+          bottom:0;
+          @include respond-to($med) {
+            right:-100px;
+          }
+        }
+        &.flag02 {
+          top:-100px;  
+          &.left-flag {
+            left:20%;
+          }
+          &.right-flag {
+            right:20%;
+          }
+        }
+        &.pool {
+          // guy in speedos, i dunno why he's called pool
+          left: 30%;
+          top:0;
+        }
 	    }
 	}
 	.board{
