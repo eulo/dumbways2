@@ -36,7 +36,9 @@ define(function(require, exports, module) {
         $.get(data.json).done(function(res) {
           var i = 0
             , l = res.frames.length
-            , dir = true;
+            , dir = true
+            , frun = true
+            , pause;
 
           setInterval(function() {
             $this.css({
@@ -47,7 +49,11 @@ define(function(require, exports, module) {
             if (data.alternate === true) {
               if (dir === true && i + 1 >= l) {
                 dir = false;
-              } else if (dir === false && i - 1 < 0) {
+              } else if (dir === false && i - 1 < 0 && !frun) {
+                // trigger pause
+                if (data.pause !== void 0 && --pause > 0) {
+                  return; 
+                }
                 dir = true;
               }
               i = dir ? i + 1 : i - 1;
@@ -56,6 +62,9 @@ define(function(require, exports, module) {
               if (i >= l) 
                 i = 0; 
             }
+            if (data.pause !== void 0)
+              pause = data.pause * data.fps;
+            frun = false;
           }, 1000 / data.fps );
         });
 
@@ -63,7 +72,9 @@ define(function(require, exports, module) {
         // simple animation
         data.maxHeight = this.height;
         
-        var interval;
+        var interval
+          , frun = true
+          , pause;
         
 
         // Do animation
@@ -71,17 +82,25 @@ define(function(require, exports, module) {
           if (data.framestall === void 0 || data.framestall !== 1)
             interval = setInterval(function() {
 
-              if (pos - data.height <= 0) {
+              if (pos - data.height < 0 && !frun) {
                 if (data.reverse === true)
                   pos = data.maxHeight + data.height;
-                else
+                else {
                   dir = true;
+                  if (data.pause !== void 0 && --pause > 0) {
+                    return;    
+                  }
+                }
               } else if (pos + data.height >= data.maxHeight || (data.framestall !== void 0 && pos + data.height >= data.height * data.framestall) ) {
                 if (data.reverse === false)
-                  pos = 0 - data.height;
+                  pos = 0 + data.height;
                 else
                   dir = false;
               }
+              // set pause countdown if applicable
+              if (data.pause !== void 0)
+                pause = data.pause * data.fps;
+              frun = false;
 
               if (dir)
                 pos += data.height;

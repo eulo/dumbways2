@@ -2735,6 +2735,11 @@ initial scale
 .center {
   margin: 0 auto; }
 
+.character {
+  position: absolute; }
+  .character[data-framestall] {
+    cursor: pointer; }
+
 html {
   height: 100%;
   font-size: 16px; }
@@ -3004,16 +3009,15 @@ body {
             height: 63px;
             line-height: 63px;
             display: block;
-            margin-left: 250px;
-            padding-left: 80px;
-            background: url(../images/pledge_button.png) no-repeat center left; }
+            margin-left: 250px; }
+            body #page #intro .foreground .platform .pledge span {
+              padding-left: 100px; }
             @media only screen and (max-width: 1200px) {
               body #page #intro .foreground .platform .pledge {
                 height: 42px;
                 line-height: 42px; } }
             @media only screen and (max-width: 767px) {
               body #page #intro .foreground .platform .pledge {
-                background: url(../images/pledge_button.png) no-repeat top center;
                 background-size: auto 21px;
                 margin: 0 auto;
                 height: 40px;

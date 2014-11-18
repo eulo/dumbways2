@@ -68,6 +68,10 @@ define(function(require,  exports, module) {
     });
   });
 
+  $('.pledge').click(function(event) {
+    event.preventDefault();
+    $(this).find('span').text('Thanks for pledging to be safe around Metro trains.');
+  });
 
   function scrollTo(el, time) {
     var target = $(el);
