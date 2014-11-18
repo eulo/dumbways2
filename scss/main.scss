@@ -337,6 +337,9 @@ body{
                 @include scale_bg(65,70,.5);
             }
         }
+        .social{
+            display: none;
+        }
     }
     a.prev,
     a.next{
@@ -400,8 +403,8 @@ body{
     //misc styles
 
     .applinks{
-        width: 700px;
-        padding: 40px;
+        // width: 700px;
+//        padding: 40px;
         margin: 0 auto;
     }
     .app_dl{
@@ -425,6 +428,7 @@ body{
                 width: 115px;
                 background-size: contain;
             }
+
         }
     }
 

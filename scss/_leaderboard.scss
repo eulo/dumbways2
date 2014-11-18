@@ -19,6 +19,16 @@
 		width: 1224px;
 		margin: 0 auto;
 		background: url(../images/leaderboard_bg_mid.png) repeat-y;
+		background-size: 100% auto;
+		@include respond-to($desktop) {
+			width: 1024px;
+		}
+		@include respond-to($large) {
+			width: 768px;
+		}
+		@include respond-to($med) {
+			width: 320px;
+		}
 		.top{
 			background: url(../images/leaderboard_bg_head.png) no-repeat center top;
 			width: 100%;
@@ -26,8 +36,19 @@
 			background-size: contain;
 			position: relative;
 			top: -90px;
+			@include respond-to($large) {
+				top: -60px;
+			}
+			@include respond-to($med) {
+				top: -30px;
+			}
+
 		}
 		.content{
+			font-size: 16px;
+			@include respond-to($med) {
+				font-size: 10px;
+			}
 			text-align: center;
 			color: $black;
 			margin-top: -100px;
@@ -45,6 +66,7 @@
 				width: 419px;
 				height: 295px;
 				background: url(../images/leaderboard_coming_soon.png) no-repeat;
+				background-size: 100% auto;
 				margin: 0 auto;
 				position: relative;
 				span{
@@ -57,6 +79,14 @@
 					top: 120px;
 					@include vendor-prefix(transform, rotate(5deg))
 				}
+				@include respond-to($med) {
+					width:229px;
+					height:150px;
+					span{
+						top: 60px;
+					}
+				}
+
 			}
 		}
 		.bottom{
@@ -66,6 +96,9 @@
 			background-size: contain;
 			position: relative;
 			bottom: -90px;
+			@include respond-to($med) {
+				bottom: -118px;
+			}
 		}
 	}
 }
