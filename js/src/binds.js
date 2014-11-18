@@ -70,7 +70,9 @@ define(function(require,  exports, module) {
 
   $('.pledge > .bttn').click(function(event) {
     event.preventDefault();
+    $(this).unbind('click');
     $(this).parent().find('span').text('Thanks for pledging to be safe around Metro trains.');
+    $(this).parent().addClass('active');
   });
 
 

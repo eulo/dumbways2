@@ -206,7 +206,6 @@
                 width: 100%;
                 background: url(../images/platform.png) no-repeat center center;
                 background-size: auto 60px;
-
             }
             .pledge{
                 text-decoration: none;
@@ -216,9 +215,44 @@
                 display: block;
                 margin-left: 250px;
                 span {
-                  padding-left:100px;
+                  padding-left:10px;
+                  display:inline-block;
+                  vertical-align:top;
                 }
-                //background: url(../images/pledge_button.png) no-repeat center left;
+                .bttn {
+                  background: url(../images/bttn.png) no-repeat;
+                  width:82px;
+                  height:46px;
+                  display: inline-block;
+                  margin-top:5px;
+                  @include respond-to($desktop) {
+                    margin-top:-10px;
+                  }
+                  @include respond-to($large) {
+                    background-size: auto 70px;
+                    height:35px;
+                    width:63px;
+                    margin-top:3px;
+                  }
+                  @include respond-to($med) {
+                    background-size: auto 60px;
+                    height:30px;
+                    width:54px;
+                    margin-top:5px;
+                  }
+                }
+                &.active {
+                  .bttn {
+                    background-position: 0 -46px;
+                    @include respond-to($large) {
+                      background-position: 0 -35px;
+                    }
+                    @include respond-to($med) {
+                      background-position: 0 -30px;
+                    }
+                  }
+                }
+                
                 @include respond-to($desktop) {
                     height: 42px;
                     line-height: 42px;
@@ -228,9 +262,13 @@
                     background-size: auto 21px;
                     margin: 0 auto;
                     height: 40px;
-                    line-height: 63px;
+                    line-height: 15px;
                     width: 290px;
                     padding: 0;
+                    span {
+                      width:222px;
+                      padding-top:7px;
+                    }
                 }
             }                  
         }
