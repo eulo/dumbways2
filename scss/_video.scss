@@ -22,14 +22,11 @@
 
     #vidplayer{
     	background: url(../images/vid_player_bg.png) no-repeat center center;
+        box-sizing: border-box;
         @include scale_bg(1087,686,1);
         margin: 0 auto;
         position: relative;
-        iframe{
-          position: relative;
-          top: 145px;
-          margin: 0 93px 0;
-        }
+        padding: 145px 0 0 93px;
         .prev, .next{
           position: absolute;
           top: 50%;
@@ -48,8 +45,8 @@
           width: 1024px;
           height: 645px;
           background-size: 100% auto;
+          padding: 120px 120px 0 93px;
           iframe{
-            margin: 0 88px 0;
             width: 829px;
             height: 464px;
           }
@@ -58,8 +55,8 @@
         @include respond-to($large) {
           width: 768px;
           height: 483px;
+          padding: 145px 120px 0 93px;
           iframe{
-            margin: 40px 65px 0;
             width: 623px;
             height: 348px;
           }
@@ -67,9 +64,8 @@
         @include respond-to($med) {
           width: 320px;
           height: 202px;
-          background-size: contain;
+          padding: 145px 120px 0 93px;
           iframe{
-            margin: 0 27px 0;
             width: 260px;
             height: 145px;
           }
