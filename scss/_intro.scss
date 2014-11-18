@@ -102,14 +102,24 @@
               &.glue {
                 top: 170px;
                 left: -40px;
+                @include respond-to($desktop) {
+                    top:150px;
+                }
               }
               &.toasty {
                 top:160px;
                 left:380px;
+                @include respond-to($desktop) {
+                    top:123px;
+                    left: 342px;
+                }
               }
               &.medicine {
                 top: 170px;
                 left: 620px;
+                @include respond-to($desktop) {
+                    display: none;
+                }
               }
             }
             .play_vid{
@@ -142,6 +152,7 @@
             background: url(../images/platform.png) no-repeat center right;
             background-size: contain;
             margin: 0 auto;
+            z-index: 50;
             @include respond-to($desktop) {
                 height: 60px;
                 background: url(../images/platform.png) no-repeat center center;
@@ -184,10 +195,24 @@
             height: 60px;
             background: url(../images/tracks.png) no-repeat center center;
             margin: 0 auto;
+            position: relative;
             @include respond-to($med) {
                 height: 30px;
                 background-size: auto 30px;
-            }                    
+            } 
+            .train{
+                background: url(../images/train-top.png) no-repeat center left;
+                // @include scale_bg(1263,176,1);
+                width: 1263px;
+                height: 176px;
+                overflow: hidden;
+                position: absolute;
+                bottom: 17px;
+                z-index: 0;
+                @include animation(0s,30s,train_top);
+                @include animation-iteration-count(infinite);
+                right: 0px;
+            }
         }
         .fg_hills{
             height: 273px;

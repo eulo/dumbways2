@@ -2726,6 +2726,46 @@ initial scale
     -o-transform: rotate(40deg);
     transform: rotate(40deg); } }
 
+@-webkit-keyframes train_top {
+  0% {
+    width: 300%; }
+
+  10% {
+    width: 0%; }
+
+  100% {
+    width: 0%; } }
+
+@-moz-keyframes train_top {
+  0% {
+    width: 300%; }
+
+  10% {
+    width: 0%; }
+
+  100% {
+    width: 0%; } }
+
+@-o-keyframes train_top {
+  0% {
+    width: 300%; }
+
+  10% {
+    width: 0%; }
+
+  100% {
+    width: 0%; } }
+
+@keyframes train_top {
+  0% {
+    width: 300%; }
+
+  10% {
+    width: 0%; }
+
+  100% {
+    width: 0%; } }
+
 .left {
   float: left; }
 
@@ -2959,12 +2999,22 @@ body {
             body #page #intro .foreground .station .character.glue {
               top: 170px;
               left: -40px; }
+              @media only screen and (max-width: 1200px) {
+                body #page #intro .foreground .station .character.glue {
+                  top: 150px; } }
             body #page #intro .foreground .station .character.toasty {
               top: 160px;
               left: 380px; }
+              @media only screen and (max-width: 1200px) {
+                body #page #intro .foreground .station .character.toasty {
+                  top: 123px;
+                  left: 342px; } }
             body #page #intro .foreground .station .character.medicine {
               top: 170px;
               left: 620px; }
+              @media only screen and (max-width: 1200px) {
+                body #page #intro .foreground .station .character.medicine {
+                  display: none; } }
           body #page #intro .foreground .station .play_vid {
             display: block;
             color: #ffffff;
@@ -2992,7 +3042,8 @@ body {
           height: 83px;
           background: url(../images/platform.png) no-repeat center right;
           background-size: contain;
-          margin: 0 auto; }
+          margin: 0 auto;
+          z-index: 50; }
           @media only screen and (max-width: 1200px) {
             body #page #intro .foreground .platform {
               height: 60px;
@@ -3028,11 +3079,49 @@ body {
           width: 100%;
           height: 60px;
           background: url(../images/tracks.png) no-repeat center center;
-          margin: 0 auto; }
+          margin: 0 auto;
+          position: relative; }
           @media only screen and (max-width: 767px) {
             body #page #intro .foreground .tracks {
               height: 30px;
               background-size: auto 30px; } }
+          body #page #intro .foreground .tracks .train {
+            background: url(../images/train-top.png) no-repeat center left;
+            width: 1263px;
+            height: 176px;
+            overflow: hidden;
+            position: absolute;
+            bottom: 17px;
+            z-index: 0;
+            -webkit-animation-delay: 0s;
+            -webkit-animation-duration: 30s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-name: train_top;
+            -webkit-animation-fill-mode: forwards;
+            /* this prevents the animation from restarting! */
+            -moz-animation-delay: 0s;
+            -moz-animation-duration: 30s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-name: train_top;
+            -moz-animation-fill-mode: forwards;
+            /* this prevents the animation from restarting! */
+            -o-animation-delay: 0s;
+            -o-animation-duration: 30s;
+            -o-animation-timing-function: linear;
+            -o-animation-name: train_top;
+            -o-animation-fill-mode: forwards;
+            /* this prevents the animation from restarting! */
+            animation-delay: 0s;
+            animation-duration: 30s;
+            animation-timing-function: linear;
+            animation-name: train_top;
+            animation-fill-mode: forwards;
+            /* this prevents the animation from restarting! */
+            -o-animation-iteration-count: infinite;
+            -moz-animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            right: 0px; }
         body #page #intro .foreground .fg_hills {
           height: 273px;
           background: no-repeat center center;
