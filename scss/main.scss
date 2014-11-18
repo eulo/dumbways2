@@ -353,6 +353,10 @@ body{
         padding: 0 14px;
         overflow: hidden;
         text-indent: -9999px;
+        @include respond-to($med) {
+            width: 15px;
+            height: 20px;
+        }
     }
     a.prev{
         background: url(../images/arrow-left.png) no-repeat center center #ffc228;
