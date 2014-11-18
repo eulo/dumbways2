@@ -3,7 +3,8 @@ require(['config'], function() {
 
       require([
         'src/binds',
-        'src/sliders'
+        'src/sliders',
+        'src/characters'
       ]);
 
 

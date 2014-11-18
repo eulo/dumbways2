@@ -8,6 +8,12 @@
 		position: relative;
 		top: -100px;
 		height: 500px;
+    
+    .character.whale {
+      position:absolute;
+      right:0;
+      bottom:0;
+    }
 	}
 	.board{
 		width: 1224px;

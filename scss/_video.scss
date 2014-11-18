@@ -2,9 +2,26 @@
     width: 100%;
     min-height: 1590px;
     background: url(../images/videos_bg.png) no-repeat center bottom #95be57;
+    position:relative;
     @include respond-to($med) {
       background-size: 800px auto;
     }
+
+    .character {
+      position:absolute;
+      &.swimmer2 {
+        right:30%;
+        bottom:200px;
+      }
+      &.swimmer1 {
+        left:30%;
+        bottom:250px;
+      }
+      &.bob {
+        
+      }
+    }
+
     #vidplayer{
     	background: url(../images/vid_player_bg.png) no-repeat center center;
         @include scale_bg(1087,686,1);
