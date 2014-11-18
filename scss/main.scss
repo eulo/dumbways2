@@ -1,5 +1,4 @@
-@import "animations";
-
+@import 'animations';
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
 
@@ -287,6 +286,7 @@ $bold : CooperBT-Bold, Georgia, Times, "Times New Roman", serif;
     }
     100% {
         opacity: 0;
+        @include vendor-prefix('transform', 'rotate(40deg)');
     }
 }
 
