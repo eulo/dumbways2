@@ -312,27 +312,16 @@ $bold : CooperBT-Bold, Georgia, Times, "Times New Roman", serif;
 }
 @include keyframe(train_top) {
     0% {
-        left: -1290px;
+        width: 200%
     }
     10% {
-        left: 110%;
+        width: 0%;
     }
     100% {
-        left: 110%;
+        width: 0%;
     }
 }
-/*
-            .train{
-                background: url(../images/train-top.png) no-repeat center center;
-                @include scale_bg(1263,176,1);
-                position: absolute;
-                bottom: 17px;
-                left: -1263px;
-                @include animation(10s,30s,train_top);
-                @include animation-iteration-count(10);
-            }
 
-*/
 
 // helper classes 
 .left{

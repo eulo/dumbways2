@@ -142,6 +142,7 @@
             background: url(../images/platform.png) no-repeat center right;
             background-size: contain;
             margin: 0 auto;
+            z-index: 50;
             @include respond-to($desktop) {
                 height: 60px;
                 background: url(../images/platform.png) no-repeat center center;
@@ -186,7 +187,20 @@
             @include respond-to($med) {
                 height: 30px;
                 background-size: auto 30px;
-            }                    
+            } 
+            .train{
+                background: url(../images/train-top.png) no-repeat center left;
+                // @include scale_bg(1263,176,1);
+                width: 1263px;
+                height: 176px;
+                overflow: hidden;
+                position: absolute;
+                bottom: 17px;
+                z-index: 0;
+                @include animation(0s,30s,train_top);
+                @include animation-iteration-count(10);
+                right: 0px;
+            }
         }
         .fg_hills{
             height: 273px;
