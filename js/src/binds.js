@@ -73,6 +73,13 @@ define(function(require,  exports, module) {
     $(this).parent().find('span').text('Thanks for pledging to be safe around Metro trains.');
   });
 
+
+  $('.play_vid', '.station').click(function(event) {
+    event.preventDefault();
+    $('#vidplayer iframe').prop('src', '//www.youtube.com/embed/IJNR2EpS0jw?rel=0&amp;controls=1&amp;showinfo=0&amp;autoplay=1');
+    scrollTo($('#vidplayer'));
+  });
+
   function scrollTo(el, time) {
     var target = $(el);
     //target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
