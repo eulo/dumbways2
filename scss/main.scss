@@ -192,6 +192,20 @@ textarea {
     width: $w * $f + px;
     height: $h * $f + px;
 }
+@mixin scale_bg_vid($w,$h,$f){
+    background-size: cover;
+    width: $w * $f + px;
+    height: $h * $f + px;
+    padding: 145 * $f + px 113 * $f +px 45 * $f +px 93 * $f +px;
+    iframe{
+        z-index: 0;
+        position: absolute;
+        top: 145 * $f + px;
+        left: 93 * $f +px;
+        width: 880 * $f +px;
+        height: 495 * $f +px;
+    }
+}
 @mixin dumbotron($Dw){
     $Dh : $Dw * .657;
     $factor : $Dw / 1080;
@@ -329,6 +343,11 @@ body{
         background: -ms-linear-gradient(left, rgba(255,255,255,0) 14%, rgba(255,255,255,0.6) 44%, rgba(255,255,255,0.6) 100%);
         background: linear-gradient(to right, rgba(255,255,255,0) 14%, rgba(255,255,255,0.6) 44%, rgba(255,255,255,0.6) 100%);
         z-index: 1000;
+        .contain{
+            max-width: 1500px;
+            margin: 0 auto;
+            height: 60px;
+        }
         .metro_logo{
             background: url(../images/metro_logo.png) no-repeat center center;
             @include scale_bg(65,70,1);
@@ -338,7 +357,22 @@ body{
             }
         }
         .social{
-            display: none;
+            .soc{
+                width: 26px;
+                height: 26px;
+                margin: 15px 2px 0;
+                display: inline-block;
+                background: url(../images/social-icons.png) no-repeat;
+                &.yt{
+                    background-position: top left;
+                }
+                &.fb{
+                    background-position: top center;
+                }
+                &.tb{
+                    background-position: top right;
+                }
+            }
         }
     }
     a.prev,
@@ -398,6 +432,13 @@ body{
                 a{
                     color: $white;
                     text-decoration: none;
+                }
+                @include respond-to($med) {
+                    text-align: center;
+                    span {
+                        float: none;
+                        display: block;
+                    }
                 }
             }
         }

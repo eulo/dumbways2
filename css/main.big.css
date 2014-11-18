@@ -3289,6 +3289,10 @@ body {
     background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 14%, rgba(255, 255, 255, 0.6) 44%, rgba(255, 255, 255, 0.6) 100%);
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 14%, rgba(255, 255, 255, 0.6) 44%, rgba(255, 255, 255, 0.6) 100%);
     z-index: 1000; }
+    body nav.main_nav .contain {
+      max-width: 1500px;
+      margin: 0 auto;
+      height: 60px; }
     body nav.main_nav .metro_logo {
       background: url(../images/metro_logo.png) no-repeat center center;
       background-size: cover;
@@ -3300,8 +3304,18 @@ body {
           background-size: cover;
           width: 32.5px;
           height: 35px; } }
-    body nav.main_nav .social {
-      display: none; }
+    body nav.main_nav .social .soc {
+      width: 26px;
+      height: 26px;
+      margin: 15px 2px 0;
+      display: inline-block;
+      background: url(../images/social-icons.png) no-repeat; }
+      body nav.main_nav .social .soc.yt {
+        background-position: top left; }
+      body nav.main_nav .social .soc.fb {
+        background-position: top center; }
+      body nav.main_nav .social .soc.tb {
+        background-position: top right; }
   body a.prev, body a.next {
     background-color: #ffc228;
     -webkit-box-shadow: 0px 8px 0px rgba(0,0,0,0.3), 0px -5px 0px #ffe273;
@@ -3565,45 +3579,67 @@ body {
         background-size: cover;
         width: 1087px;
         height: 686px;
+        padding: 145px 113px 45px 93px;
         margin: 0 auto;
-        position: relative;
-        padding: 145px 0 0 93px; }
+        position: relative; }
+        body #page #videos #vidplayer iframe {
+          z-index: 0;
+          position: absolute;
+          top: 145px;
+          left: 93px;
+          width: 880px;
+          height: 495px; }
         body #page #videos #vidplayer .prev, body #page #videos #vidplayer .next {
           position: absolute;
           top: 50%;
-          display: none; }
+          display: none;
+          z-index: 5; }
           @media only screen and (max-width: 1200px) {
             body #page #videos #vidplayer .prev, body #page #videos #vidplayer .next {
               display: block; } }
         body #page #videos #vidplayer .prev {
-          left: 0px; }
+          left: -10px; }
         body #page #videos #vidplayer .next {
           right: 0px; }
         @media only screen and (max-width: 1200px) {
           body #page #videos #vidplayer {
-            width: 1024px;
-            height: 645px;
-            background-size: 100% auto;
-            padding: 120px 120px 0 93px; }
+            background-size: cover;
+            width: 978.3px;
+            height: 617.4px;
+            padding: 130.5px 101.7px 40.5px 83.7px; }
             body #page #videos #vidplayer iframe {
-              width: 829px;
-              height: 464px; } }
+              z-index: 0;
+              position: absolute;
+              top: 130.5px;
+              left: 83.7px;
+              width: 792px;
+              height: 445.5px; } }
         @media only screen and (max-width: 1023px) {
           body #page #videos #vidplayer {
-            width: 768px;
-            height: 483px;
-            padding: 145px 120px 0 93px; }
+            background-size: cover;
+            width: 543.5px;
+            height: 343px;
+            padding: 72.5px 56.5px 22.5px 46.5px; }
             body #page #videos #vidplayer iframe {
-              width: 623px;
-              height: 348px; } }
+              z-index: 0;
+              position: absolute;
+              top: 72.5px;
+              left: 46.5px;
+              width: 440px;
+              height: 247.5px; } }
         @media only screen and (max-width: 767px) {
           body #page #videos #vidplayer {
-            width: 320px;
-            height: 202px;
-            padding: 145px 120px 0 93px; }
+            background-size: cover;
+            width: 304.36px;
+            height: 192.08px;
+            padding: 40.6px 31.64px 12.6px 26.04px; }
             body #page #videos #vidplayer iframe {
-              width: 260px;
-              height: 145px; } }
+              z-index: 0;
+              position: absolute;
+              top: 40.6px;
+              left: 26.04px;
+              width: 246.4px;
+              height: 138.6px; } }
       body #page #videos .vid_links {
         background: url(../images/vid_thumbs.png) no-repeat center center;
         background-size: cover;
@@ -3791,7 +3827,8 @@ body {
     body #page #downloads {
       text-align: center;
       background: #c6dee5;
-      position: relative; }
+      position: relative;
+      z-index: 10; }
       body #page #downloads .character {
         position: absolute; }
         body #page #downloads .character.yeti {
@@ -3869,6 +3906,10 @@ body {
           height: 228px;
           position: relative;
           margin: 0 auto 50px; }
+          @media only screen and (max-width: 1200px) {
+            body #page #downloads .content .dl_slideshow {
+              width: 1020px;
+              background-size: 100% auto; } }
           @media only screen and (max-width: 1023px) {
             body #page #downloads .content .dl_slideshow {
               width: 620px;
@@ -3961,7 +4002,10 @@ body {
     body #page #education {
       position: relative;
       font-size: 16px;
-      padding-bottom: 400px; }
+      background: #526373 url(../images/underwater-bg.png) no-repeat center bottom;
+      background-size: 100% auto;
+      padding-bottom: 400px;
+      margin-bottom: 80px; }
       @media only screen and (max-width: 767px) {
         body #page #education {
           font-size: 12px; } }
@@ -3988,8 +4032,6 @@ body {
           body #page #education .character {
             display: none; } }
       body #page #education .content {
-        background: #526373 url(../images/underwater-bg.png) no-repeat center bottom;
-        background-size: 100% auto;
         text-align: center; }
         @media only screen and (max-width: 1023px) {
           body #page #education .content {
@@ -4035,6 +4077,11 @@ body {
                 padding-top: 10px;
                 background: url(../images/safety_bubble.png) no-repeat bottom center;
                 background-size: 30px auto; } }
+          @media only screen and (max-width: 1023px) {
+            body #page #education .content ul.saftey_tips {
+              padding-left: 0; }
+              body #page #education .content ul.saftey_tips li {
+                margin-right: 0; } }
       @media only screen and (max-width: 1023px) {
         body #page #education {
           padding-bottom: 80px; } }
@@ -4042,7 +4089,13 @@ body {
       width: 100%;
       position: relative;
       background: #f3efad;
-      padding-top: 500px; }
+      padding-top: 470px; }
+      @media only screen and (max-width: 1023px) {
+        body #page #shop {
+          padding-top: 300px; } }
+      @media only screen and (max-width: 767px) {
+        body #page #shop {
+          padding-top: 50px; } }
       body #page #shop .sandcastle {
         width: 100%;
         height: 229px;
@@ -4060,7 +4113,8 @@ body {
           position: absolute;
           top: -490px;
           height: 610px;
-          width: 100%; }
+          width: 100%;
+          background-size: 100% auto; }
         body #page #shop .shop_mountains .content {
           width: 100%;
           text-align: center;
@@ -4103,6 +4157,12 @@ body {
         body #page footer .foot_links a {
           color: #ffffff;
           text-decoration: none; }
+        @media only screen and (max-width: 767px) {
+          body #page footer .foot_links {
+            text-align: center; }
+            body #page footer .foot_links span {
+              float: none;
+              display: block; } }
   body .applinks {
     margin: 0 auto; }
   body .app_dl {

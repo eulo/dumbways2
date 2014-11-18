@@ -2,7 +2,13 @@
 	width: 100%;
 	position: relative;
 	background: #f3efad;
-	padding-top: 500px;
+	padding-top: 470px;
+	@include respond-to($large) {
+		padding-top: 300px;
+	}
+	@include respond-to($med) {
+		padding-top: 50px;
+	}
 	.sandcastle{
 		width: 100%;
 		height: 229px;
@@ -22,6 +28,7 @@
 			top: -490px;
 			height: 610px;
 			width: 100%;
+			background-size: 100% auto;
 		}
 		.content{
 			width: 100%;

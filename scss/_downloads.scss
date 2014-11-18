@@ -2,7 +2,7 @@
 	text-align: center;
 	background: #c6dee5;
 	position: relative;
-
+	z-index: 10;
   .character {
     position:absolute;
     &.yeti {
@@ -82,6 +82,10 @@
 			@include scale_bg(1038,228,1);
       		position:relative;
 			margin: 0 auto 50px;
+			@include respond-to($desktop) {
+				width: 1020px;
+				background-size: 100% auto;
+			}
 			@include respond-to($large) {
 				width: 620px;
 				background: transparent;

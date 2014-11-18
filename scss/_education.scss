@@ -4,6 +4,8 @@
   @include respond-to($med) {
   	font-size: 12px;
   }
+	background: #526373 url(../images/underwater-bg.png) no-repeat center bottom;
+	background-size: 100% auto;
 	.water_top{
 		background: #3c4856 url(../images/water-top.png) no-repeat center bottom;
 		width: 100%;
@@ -33,8 +35,6 @@
     }
   }
   	.content{
-		background: #526373 url(../images/underwater-bg.png) no-repeat center bottom;
-		background-size: 100% auto;
 		text-align: center;
 		@include respond-to($large) {
 			padding-bottom: 200px;
@@ -79,10 +79,18 @@
 					background-size: 30px auto;
 				}
 			}
+			@include respond-to($large) {
+				padding-left: 0;
+				li{
+					margin-right: 0;
+				}
+			}
+
 		}
 	}
 
 	padding-bottom: 400px;
+	margin-bottom: 80px;
 	@include respond-to($large) {
 		padding-bottom: 80px;
 	}

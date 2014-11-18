@@ -25,52 +25,36 @@
     #vidplayer{
     	background: url(../images/vid_player_bg.png) no-repeat center center;
         box-sizing: border-box;
-        @include scale_bg(1087,686,1);
+        @include scale_bg_vid(1087,686,1);
         margin: 0 auto;
         position: relative;
-        padding: 145px 0 0 93px;
+        
         .prev, .next{
           position: absolute;
           top: 50%;
           display: none;
+          z-index: 5;
           @include respond-to($desktop) {
             display: block;
           }
         }
         .prev{
-          left: 0px;
+          left: -10px;
         }
         .next{
           right: 0px;
         }
+        iframe{
+          // display: block;
+        }
         @include respond-to($desktop) {
-          width: 1024px;
-          height: 645px;
-          background-size: 100% auto;
-          padding: 120px 120px 0 93px;
-          iframe{
-            width: 829px;
-            height: 464px;
-          }
-
+          @include scale_bg_vid(1087,686,.9);
         }
         @include respond-to($large) {
-          width: 768px;
-          height: 483px;
-          padding: 145px 120px 0 93px;
-          iframe{
-            width: 623px;
-            height: 348px;
-          }
+          @include scale_bg_vid(1087,686,.5);
         }
         @include respond-to($med) {
-          width: 320px;
-          height: 202px;
-          padding: 145px 120px 0 93px;
-          iframe{
-            width: 260px;
-            height: 145px;
-          }
+          @include scale_bg_vid(1087,686,.28);
         }
     }
 
