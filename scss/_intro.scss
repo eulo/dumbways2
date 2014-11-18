@@ -149,6 +149,10 @@
                 @include respond-to($desktop) {
                     top:150px;
                 }
+                @include respond-to($large) {
+                  left:40px;
+                  top:140px;
+                }
               }
               &.toasty {
                 top:160px;

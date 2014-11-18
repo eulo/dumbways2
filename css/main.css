@@ -3222,6 +3222,10 @@ body {
               @media only screen and (max-width: 1200px) {
                 body #page #intro .foreground .station .character.glue {
                   top: 150px; } }
+              @media only screen and (max-width: 1023px) {
+                body #page #intro .foreground .station .character.glue {
+                  left: 40px;
+                  top: 140px; } }
             body #page #intro .foreground .station .character.toasty {
               top: 160px;
               left: 380px; }
