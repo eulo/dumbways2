@@ -2,7 +2,7 @@
 	text-align: center;
 	background: #c6dee5;
 	position: relative;
-
+	z-index: 10;
   .character {
     position:absolute;
     &.yeti {
