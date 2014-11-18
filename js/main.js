@@ -2,7 +2,8 @@ require(['config'], function() {
     require(['app'], function() {
 
       require([
-        'src/binds'
+        'src/binds',
+        'src/sliders'
       ]);
 
 
