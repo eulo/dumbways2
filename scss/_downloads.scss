@@ -7,11 +7,13 @@
     position:absolute;
     &.yeti {
       right:20px;
-      top: 100px;
+      top: 0px;
+      z-index:10;
     }
     &.frozen {
       right: 20px;
       top: 600px;
+      z-index:10;
     }
   }
 	.snow_mountains{

@@ -2944,6 +2944,15 @@ body {
               background-size: cover;
               width: 232.5px;
               height: 142px; } }
+          body #page #intro .foreground .station .character {
+            position: absolute; }
+            body #page #intro .foreground .station .character[data-framestall] {
+              cursor: pointer; }
+            body #page #intro .foreground .station .character.snake {
+              top: 178px;
+              left: 80px; }
+            body #page #intro .foreground .station .character.glue {
+              top: 170px; }
           body #page #intro .foreground .station .play_vid {
             display: block;
             color: #ffffff;
@@ -3045,6 +3054,9 @@ body {
         body #page #videos .character.swimmer1 {
           left: 30%;
           bottom: 250px; }
+        body #page #videos .character.piranha {
+          bottom: 220px;
+          left: 45%; }
       body #page #videos #vidplayer {
         background: url(../images/vid_player_bg.png) no-repeat center center;
         box-sizing: border-box;
@@ -3305,10 +3317,12 @@ body {
         position: absolute; }
         body #page #downloads .character.yeti {
           right: 20px;
-          top: 100px; }
+          top: 0px;
+          z-index: 10; }
         body #page #downloads .character.frozen {
           right: 20px;
-          top: 600px; }
+          top: 600px;
+          z-index: 10; }
       body #page #downloads .snow_mountains {
         width: 100%;
         background: url(../images/blue_mountains.png) no-repeat center bottom;
