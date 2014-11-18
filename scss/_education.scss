@@ -1,9 +1,15 @@
 #education{
+  position:relative;
 	.water_top{
 		background: #3c4856 url(../images/water-top.png) no-repeat center bottom;
 		width: 100%;
 		height: 300px;
 	}
+  .character.magnet-man {
+    position:absolute;
+    right:20px;
+    top:0;
+  }
 	background: #526373 url(../images/underwater-bg.png) no-repeat center bottom;
 	background-size: 100% auto;
 	text-align: center;
