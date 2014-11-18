@@ -452,7 +452,7 @@ body{
     #page{
         max-width: 1600px;
         margin: 0 auto;
-        @include respond-to($med) {
+        @include respond-to($large) {
             overflow: hidden;
         }
 
