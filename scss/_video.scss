@@ -2,8 +2,8 @@
 #videos{
 
     width: 100%;
-    min-height: 1590px;
-    background: url(../images/videos_bg.png) no-repeat center bottom #95be57;
+    min-height: 1430px;
+    background: url(../images/videos_bg.png) no-repeat center 80px #95be57;
     position:relative;
     @include respond-to($med) {
       background-size: 800px auto;

@@ -3556,7 +3556,7 @@ body {
             font-family: CooperBT-Bold, Georgia, Times, "Times New Roman", serif;
             margin: 0 auto;
             position: relative;
-            top: 100px; }
+            top: 107px; }
             @media only screen and (max-width: 767px) {
               body #page #intro .foreground .station .play_vid {
                 width: 120px;
@@ -3667,8 +3667,8 @@ body {
             width: 75px; }
     body #page #videos {
       width: 100%;
-      min-height: 1590px;
-      background: url(../images/videos_bg.png) no-repeat center bottom #95be57;
+      min-height: 1430px;
+      background: url(../images/videos_bg.png) no-repeat center 80px #95be57;
       position: relative; }
       @media only screen and (max-width: 767px) {
         body #page #videos {
@@ -3840,12 +3840,13 @@ body {
         background: url(../images/sand_top_bg.png) no-repeat center top;
         position: relative;
         top: -100px;
-        height: 500px; }
+        height: 320px; }
         body #page #leaderboard .sand_top .character {
           position: absolute; }
           body #page #leaderboard .sand_top .character.whale {
-            right: 0;
-            bottom: 0; }
+            right: -35px;
+            bottom: 0;
+            z-index: 2; }
             @media only screen and (max-width: 767px) {
               body #page #leaderboard .sand_top .character.whale {
                 right: -100px; } }
