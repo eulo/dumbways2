@@ -4,6 +4,10 @@
     background-size: 100% auto;
     min-height: 800px;
     position: relative;
+    @include respond-to($desktop) {
+            min-height: 727px;
+
+    }
     @include respond-to($large) {
         font-size: 14px;
     }
@@ -136,11 +140,16 @@
                 margin-left: 250px;
                 padding-left: 80px;
                 background: url(../images/pledge_button.png) no-repeat center left;
+                @include respond-to($desktop) {
+                    height: 42px;
+                    line-height: 42px;
+                }
                 @include respond-to($med) {
                     background: url(../images/pledge_button.png) no-repeat top center;
                     background-size: auto 21px;
                     margin: 0 auto;
                     height: 40px;
+                    line-height: 63px;
                     width: 290px;
                     padding: 0;
                 }
