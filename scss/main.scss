@@ -336,6 +336,9 @@ body{
                 @include scale_bg(65,70,.5);
             }
         }
+        .social{
+            display: none;
+        }
     }
     a.prev,
     a.next{
@@ -424,6 +427,7 @@ body{
                 width: 115px;
                 background-size: contain;
             }
+
         }
     }
 
