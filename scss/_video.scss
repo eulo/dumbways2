@@ -23,6 +23,9 @@
       &.piranha {
         bottom:220px;
         left:45%;
+        @include respond-to($med) {
+          display: none;
+        }
       }
     }
 

@@ -321,6 +321,28 @@ $bold : CooperBT-Bold, Georgia, Times, "Times New Roman", serif;
         width: 0%;
     }
 }
+@include keyframe(light_chase_l) {
+    0% {
+        @include vendor-prefix('transform', 'rotate(15deg)');
+    }
+    50% {
+        @include vendor-prefix('transform', 'rotate(25deg)');
+    }
+    100% {
+        @include vendor-prefix('transform', 'rotate(15deg)');
+    }
+}
+@include keyframe(light_chase_r) {
+    0% {
+        @include vendor-prefix('transform', 'rotate(-15deg)');
+    }
+    50% {
+        @include vendor-prefix('transform', 'rotate(-25deg)');
+    }
+    100% {
+        @include vendor-prefix('transform', 'rotate(-15deg)');
+    }
+}
 
 
 // helper classes 
