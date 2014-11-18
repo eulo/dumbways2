@@ -47,6 +47,32 @@
             background-size: 1200px auto;
             height: 630px;
         }
+        .download_lockup{
+            background: url(../images/games-logo.png) no-repeat top left;
+            padding-top: 100px;
+            background-size: 144px auto;
+            width: 300px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 100;
+            margin-top: 60px;
+            .applinks{
+                width: 200px;
+                .app_dl{
+                    width: 200px;
+                }
+                .app_dl_link{
+                    margin-top: 0;
+                }
+                .run_char{
+                    background: url(../images/loopy.png) no-repeat;
+                    @include scale_bg(147,201,1);
+                    position: absolute;
+                    top: -110px;
+                    right: 0px;
+                }
+            }
+        }
         @include respond-to($large) {
             .applinks{
                 width: 320px;
