@@ -3,6 +3,17 @@
 	background: #c6dee5;
 	position: relative;
 
+  .character {
+    position:absolute;
+    &.yeti {
+      right:20px;
+      top: 100px;
+    }
+    &.frozen {
+      right: 20px;
+      top: 600px;
+    }
+  }
 	.snow_mountains{
 		width: 100%;
 		background: url(../images/blue_mountains.png) no-repeat center top;
