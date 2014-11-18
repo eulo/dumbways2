@@ -13,6 +13,9 @@
     @include respond-to($med) {
       font-size: 12px;
       min-height: 500px;
+      .character{
+        display: none;
+      }
     }
     .mountain_bg{
       max-width: 1600px;
@@ -56,6 +59,17 @@
             position: relative;
             z-index: 100;
             margin-top: 60px;
+            @include respond-to($desktop) {
+                margin-top: 40px;
+
+            }
+            @include respond-to($large) {
+                margin-top: 0;
+                width: 240px;
+            }
+            @include respond-to($med) {
+                margin-top: 40px;
+            }
             .applinks{
                 width: 200px;
                 .app_dl{
@@ -70,6 +84,10 @@
                     position: absolute;
                     top: -110px;
                     right: 0px;
+                    @include respond-to($large) {
+                        top: -70px;
+                        @include scale_bg(147,201,.7);
+                    }
                 }
             }
         }
@@ -238,6 +256,9 @@
                 @include animation(0s,30s,train_top);
                 @include animation-iteration-count(infinite);
                 right: 0px;
+                 @include respond-to($med) {
+                    display: none;
+                 }
             }
         }
         .fg_hills{

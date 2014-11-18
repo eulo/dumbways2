@@ -79,6 +79,11 @@
           @include animation-iteration-count(infinite);
           position: absolute;
           bottom: 0px;
+   	      	@include respond-to($med) {
+	      		@include scale_bg(313,902,.3);
+	      		bottom:-50px;
+	      	}
+
 	      }
         .booth-man {
           position:absolute;
@@ -89,7 +94,7 @@
           
 	      	@include scale_bg(328,530,.9);
           @include respond-to($med) {
-            @include scale_bg(328,530,.6);
+            @include scale_bg(328,530,.3);
             right:20px;
           }
         }
