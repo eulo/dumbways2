@@ -2952,7 +2952,14 @@ body {
               top: 178px;
               left: 80px; }
             body #page #intro .foreground .station .character.glue {
-              top: 170px; }
+              top: 170px;
+              left: -40px; }
+            body #page #intro .foreground .station .character.toasty {
+              top: 160px;
+              left: 380px; }
+            body #page #intro .foreground .station .character.medicine {
+              top: 170px;
+              left: 620px; }
           body #page #intro .foreground .station .play_vid {
             display: block;
             color: #ffffff;
