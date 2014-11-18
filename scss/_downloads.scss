@@ -69,8 +69,20 @@
 		.dl_slideshow{
 			background: url(../images/iceblock-bg.png) no-repeat;
 			@include scale_bg(1038,228,1);
-      position:relative;
+      		position:relative;
 			margin: 0 auto 50px;
+			@include respond-to($large) {
+				width: 620px;
+				background: transparent;
+				padding: 0 0 0 16px;
+			
+			}
+			@include respond-to($med) {
+				width: 270px;
+				background: transparent;
+				padding: 0 0 0 16px;
+			
+			}
 
       .next {
         position:absolute;
@@ -89,6 +101,10 @@
         height: 100%;
         overflow: hidden;
         margin: 0 120px 0 110px;
+		@include respond-to($med) {
+			margin: 0 40px;
+			width: 172px;
+		}
 
         li {
           width: 172px;
@@ -117,6 +133,16 @@
 				background: url(../images/soundcloud-bg.png) no-repeat center bottom;
 				width: 500px;
 				padding: 38px 50px;
+				@include respond-to($med) {
+					background: transparent;
+					width: 100%;
+					box-sizing: border-box;
+					padding: 0 10px;
+				}
+				@include respond-to($large) {
+					float: none;
+					margin: 0 auto;
+				}
 			}
 			.old_app{
 				float: right;
@@ -124,6 +150,10 @@
 				padding-top: 38px;
 				.app_dl_link{
 					margin-top: 10px;
+				}
+				@include respond-to($large) {
+					float: none;
+					margin: 0 auto;
 				}
 			}
 			.app_icon{
