@@ -3,17 +3,22 @@
     width: 100%;
     padding-bottom: 330px;
     position: relative;
+    @include respond-to($med) {
+    padding-bottom: 110px;
+    }
 	.sand_top{
 		background: url(../images/sand_top_bg.png) no-repeat center top;
 		position: relative;
 		top: -100px;
 		height: 500px;
-    
-    .character.whale {
-      position:absolute;
-      right:0;
-      bottom:0;
-    }
+	    .character.whale {
+	      position:absolute;
+	      right: 0;
+	      @include respond-to($med) {
+		      right:-100px;
+		  }
+	      bottom:0;
+	    }
 	}
 	.board{
 		width: 1224px;

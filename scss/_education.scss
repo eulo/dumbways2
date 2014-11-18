@@ -1,5 +1,9 @@
 #education{
   position:relative;
+  font-size: 16px;
+  @include respond-to($med) {
+  	font-size: 12px;
+  }
 	.water_top{
 		background: #3c4856 url(../images/water-top.png) no-repeat center bottom;
 		width: 100%;
@@ -24,34 +28,62 @@
       right:30px;
       z-index:3;
     }
+    @include respond-to($desktop) {
+    	display: none;
+    }
   }
-	background: #526373 url(../images/underwater-bg.png) no-repeat center bottom;
-	background-size: 100% auto;
-	text-align: center;
-	h2{
-		position: relative;
-		margin: 0 auto;
-		background: url(../images/safety_title.png) no-repeat;
-		@include scale_bg(290,111,1);
-		margin-bottom: 40px;
-	}
-	p{
-		max-width: 640px;
-		margin: 0 auto;
-		margin-bottom: 40px;
-	}
-	ul.saftey_tips{
-		list-style: none;
-		max-width: 960px;
-		margin: 0 auto;
-		padding-left: 20px;
-		li{
-			display: inline-block;
-			width: 335px;
-			padding-left: 100px;
-			margin-right: 40px;
-			background: url(../images/safety_bubble.png) no-repeat center left;
+  	.content{
+		background: #526373 url(../images/underwater-bg.png) no-repeat center bottom;
+		background-size: 100% auto;
+		text-align: center;
+		@include respond-to($large) {
+			padding-bottom: 200px;
+		}
+		@include respond-to($med) {
+			box-sizing: border-box;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		h2{
+			position: relative;
+			margin: 0 auto;
+			background: url(../images/safety_title.png) no-repeat;
+			@include scale_bg(290,111,1);
+			margin-bottom: 40px;
+			@include respond-to($med) {
+				@include scale_bg(290,111,.5);
+			}
+		}
+		p{
+			max-width: 640px;
+			margin: 0 auto;
+			margin-bottom: 40px;
+		}
+		ul.saftey_tips{
+			list-style: none;
+			max-width: 960px;
+			margin: 0 auto;
+			padding-left: 20px;
+			li{
+				display: inline-block;
+				width: 335px;
+				padding-left: 100px;
+				margin-right: 40px;
+				background: url(../images/safety_bubble.png) no-repeat center left;
+				@include respond-to($med) {
+					width: 100%;
+					padding-left: 0;
+					padding-bottom: 50px;
+					padding-top: 10px;
+					background: url(../images/safety_bubble.png) no-repeat bottom center;
+					background-size: 30px auto;
+				}
+			}
 		}
 	}
+
 	padding-bottom: 400px;
+	@include respond-to($large) {
+		padding-bottom: 80px;
+	}
 }
