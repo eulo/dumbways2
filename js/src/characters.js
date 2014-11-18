@@ -62,31 +62,56 @@ define(function(require, exports, module) {
       } else {
         // simple animation
         data.maxHeight = this.height;
+        
+        var interval;
+        
 
+        // Do animation
         setTimeout(function() {
-          setInterval(function() {
+          if (data.framestall === void 0 || data.framestall !== 1)
+            interval = setInterval(function() {
 
-            if (pos - data.height <= 0) {
-              if (data.reverse === true)
-                pos = data.maxHeight + data.height;
-              else
-                dir = true;
-            } else if (pos + data.height >= data.maxHeight ) {
-              if (data.reverse === false)
-                pos = 0 - data.height;
-              else
-                dir = false;
-            }
+              if (pos - data.height <= 0) {
+                if (data.reverse === true)
+                  pos = data.maxHeight + data.height;
+                else
+                  dir = true;
+              } else if (pos + data.height >= data.maxHeight || (data.framestall !== void 0 && pos + data.height >= data.height * data.framestall) ) {
+                if (data.reverse === false)
+                  pos = 0 - data.height;
+                else
+                  dir = false;
+              }
 
-            if (dir)
-              pos += data.height;
-            else 
-              pos -= data.height;
+              if (dir)
+                pos += data.height;
+              else 
+                pos -= data.height;
 
-            $this.css({
-              'background-position': '0px ' + -pos + 'px'
-            }); 
+              $this.css({
+                'background-position': '0px ' + -pos + 'px'
+              }); 
           }, 1000 / data.fps);
+
+          // Make clickable
+          if (data.framestall !== void 0) {
+            $this.click(function(event) {
+              $this.unbind('click');
+              clearInterval(interval);
+              interval = setInterval(function() {
+                pos += data.height; 
+                $this.css({
+                  'background-position': '0px ' + -pos + 'px'
+                }); 
+                // If end of animation, stop
+                if (pos + data.height >= data.maxHeight) {
+                  clearInterval(interval);
+                }
+
+              }, 1000 / data.fps);
+            });
+          }
+
         }, Math.random() * 1000);
       }
     };

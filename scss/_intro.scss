@@ -5,39 +5,38 @@
     min-height: 800px;
     position: relative;
     @include respond-to($desktop) {
-            min-height: 727px;
-
+      min-height: 727px;
     }
     @include respond-to($large) {
-        font-size: 14px;
+      font-size: 14px;
     }
     @include respond-to($med) {
-        font-size: 12px;
-        min-height: 500px;
+      font-size: 12px;
+      min-height: 500px;
     }
     .mountain_bg{
-        max-width: 1600px;
-        width: 100%;
-        top: 200px;
+      max-width: 1600px;
+      width: 100%;
+      top: 200px;
+      position: absolute;
+      .left{
+        background: url(../images/bg_mountains_left.png);
+        @include scale_bg(439,383,1);
         position: absolute;
-        .left{
-            background: url(../images/bg_mountains_left.png);
-            @include scale_bg(439,383,1);
-            position: absolute;
-            left: 0px;
-            @include respond-to($med) {
-                @include scale_bg(439,383,.5); 
-            }
+        left: 0px;
+        @include respond-to($med) {
+          @include scale_bg(439,383,.5); 
         }
-        .right{
-            background: url(../images/bg_mountains_right.png);
-            position: absolute;
-            right: 0px;
-            @include scale_bg(586,383,1);
-            @include respond-to($med) {
-                @include scale_bg(586,383,.5);
-            }
+      }
+      .right{
+        background: url(../images/bg_mountains_right.png);
+        position: absolute;
+        right: 0px;
+        @include scale_bg(586,383,1);
+        @include respond-to($med) {
+          @include scale_bg(586,383,.5);
         }
+      }
     }
     .foreground{
         position: relative;
@@ -79,6 +78,7 @@
                 @include scale_bg(279,114,.5);
              }
         }
+        
         .station{
             @include scale_bg(465,284,1);
             background: url(../images/station.png) no-repeat center center;
@@ -89,6 +89,28 @@
             }
             @include respond-to($med) {
                 @include scale_bg(465,284,.5);
+            }
+            .character {
+              position: absolute;
+              &[data-framestall] {
+                cursor:pointer;
+              }
+              &.snake {
+                top:178px;
+                left:80px;
+              }
+              &.glue {
+                top: 170px;
+                left: -40px;
+              }
+              &.toasty {
+                top:160px;
+                left:380px;
+              }
+              &.medicine {
+                top: 170px;
+                left: 620px;
+              }
             }
             .play_vid{
                 display: block;
