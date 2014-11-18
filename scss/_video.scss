@@ -15,10 +15,18 @@
       &.swimmer2 {
         right:30%;
         bottom:200px;
+        @include respond-to($med) {
+          bottom: 100px;
+          right:30px;
+        }
       }
       &.swimmer1 {
         left:30%;
         bottom:250px;
+        @include respond-to($med) {
+          bottom: 100px;
+          left:30px;
+        }
       }
       &.piranha {
         bottom:220px;
