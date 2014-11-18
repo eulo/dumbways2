@@ -10,12 +10,13 @@
 		background: url(../images/sand_top_bg.png) no-repeat center top;
 		position: relative;
 		top: -100px;
-		height: 500px;
+		height: 320px;
 	    .character {
         position:absolute;
         &.whale {
-          right: 0;
+          right: -35px;
           bottom:0;
+          z-index:2;
           @include respond-to($med) {
             right:-100px;
           }
