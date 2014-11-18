@@ -102,14 +102,24 @@
               &.glue {
                 top: 170px;
                 left: -40px;
+                @include respond-to($desktop) {
+                    top:150px;
+                }
               }
               &.toasty {
                 top:160px;
                 left:380px;
+                @include respond-to($desktop) {
+                    top:123px;
+                    left: 342px;
+                }
               }
               &.medicine {
                 top: 170px;
                 left: 620px;
+                @include respond-to($desktop) {
+                    display: none;
+                }
               }
             }
             .play_vid{
@@ -198,7 +208,7 @@
                 bottom: 17px;
                 z-index: 0;
                 @include animation(0s,30s,train_top);
-                @include animation-iteration-count(10);
+                @include animation-iteration-count(infinite);
                 right: 0px;
             }
         }
