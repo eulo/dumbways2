@@ -192,6 +192,20 @@ textarea {
     width: $w * $f + px;
     height: $h * $f + px;
 }
+@mixin scale_bg_vid($w,$h,$f){
+    background-size: cover;
+    width: $w * $f + px;
+    height: $h * $f + px;
+    padding: 145 * $f + px 113 * $f +px 45 * $f +px 93 * $f +px;
+    iframe{
+        z-index: 0;
+        position: absolute;
+        top: 145 * $f + px;
+        left: 93 * $f +px;
+        width: 880 * $f +px;
+        height: 495 * $f +px;
+    }
+}
 @mixin dumbotron($Dw){
     $Dh : $Dw * .657;
     $factor : $Dw / 1080;
