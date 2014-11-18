@@ -160,6 +160,7 @@
             height: 60px;
             background: url(../images/tracks.png) no-repeat center center;
             margin: 0 auto;
+            position: relative;
             @include respond-to($med) {
                 height: 30px;
                 background-size: auto 30px;
