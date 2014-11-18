@@ -7,6 +7,36 @@ define(function(require, exports, module) {
   var $gifSlider = $('.dl_slideshow.gifs');
   var $wallpaperSlider = $('.dl_slideshow.wallpapers');
 
+  var videoSlider = function($cont, $player) {
+    $cont.find('.next, .prev').click(function(event) {
+      event.preventDefault();
+      var next = $(this).hasClass('next')
+        , i = next ? 1 : -1
+        , di = 0
+        , l = $cont.find('li a').length
+        , s = next ? 1 : l;
+
+      $cont.find('li a').each(function() {
+        di = $(this).data('index') + i;
+
+        if (di < 1 || di > l)
+          di = s;
+          
+        $(this).attr('data-index', di)
+          .data('index', di)
+          .addClass('force-repaint')
+          .removeClass('force-repaint');
+      });
+
+    });
+
+    $cont.find('li a').click(function(event) {
+      event.preventDefault();
+      $cont.find('li a').removeClass('active');
+      $(this).addClass('active');
+    });
+  }
+
   var initSlider = function($cont) {
     var i = 0;
     $cont.find('li').each(function() {
@@ -57,5 +87,6 @@ define(function(require, exports, module) {
 
   initSlider($gifSlider);
   initSlider($wallpaperSlider);
+  videoSlider($('.vid_links'), $('#vidplayer'));
 
 });

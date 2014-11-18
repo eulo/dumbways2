@@ -16,26 +16,82 @@
       position: relative;
       top: 60px;
       left: -12px;
-      .vids{
+      ul.vids{
         @include navigation-list;
+
+        li {
+          a {
+            display:none;
+
+            img {
+              width:155px;
+              height:110px;
+            }
+            &.active {
+              img {
+                opacity:0.5;
+              }
+            }
+            &[data-index="1"], &[data-index="2"], &[data-index="3"], &[data-index="4"], &[data-index="5"] {
+              display:block;
+              position:absolute;
+            }
+            &[data-index="1"] {
+              top: 33px;
+              left: 13px;
+              -webkit-transform: rotate(4deg);
+              -moz-transform: rotate(4deg);
+              transform: rotate(4deg);
+            }
+            &[data-index="2"] {
+              top: 33px;
+              left: 207px;
+              -webkit-transform: rotate(-4deg);
+              -moz-transform: rotate(-4deg);
+              transform: rotate(-4deg);
+            }
+            &[data-index="3"] {
+              top: 32px;
+              left: 381px;
+              -webkit-transform: rotate(4deg);
+              -moz-transform: rotate(4deg);
+              transform: rotate(4deg);
+            }
+            &[data-index="4"] {
+              top: 32px;
+              left: 575px;
+              -webkit-transform: rotate(-5deg);
+              -moz-transform: rotate(-5deg);
+              transform: rotate(-5deg); 
+            }
+            &[data-index="5"] {
+              top: 32px;
+              left: 749px;
+              -webkit-transform: rotate(4deg);
+              -moz-transform: rotate(4deg);
+              transform: rotate(4deg);
+            }
+          }
+        }
       }
 
       .next {
         position: absolute;
-        right: 62px;
+        right: -70px;
         top: 70px;
-        -webkit-transform: rotate(5deg);
-        -moz-transform: rotate(5deg);
-        transform: rotate(5deg);
+        -webkit-transform: rotate(-5deg);
+        -moz-transform: rotate(-5deg);
+        transform: rotate(-5deg);
       }
       .prev {
         position:absolute;
         top: 69px;
-        left: 57px;
-        -webkit-transform: rotate(5deg);
-        -moz-transform: rotate(5deg);
-        transform: rotate(5deg);
+        left: -76px;
+        -webkit-transform: rotate(-5deg);
+        -moz-transform: rotate(-5deg);
+        transform: rotate(-5deg);
       }
+
   
     }
 }

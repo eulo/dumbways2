@@ -282,6 +282,13 @@ body {
       background-size: 100% auto;
       min-height: 800px;
       position: relative; }
+      @media only screen and (max-width: 1023px) {
+        body #page #intro {
+          font-size: 14px; } }
+      @media only screen and (max-width: 767px) {
+        body #page #intro {
+          font-size: 12px;
+          min-height: 500px; } }
       body #page #intro .mountain_bg {
         max-width: 1600px;
         width: 100%;
@@ -294,7 +301,7 @@ body {
           height: 383px;
           position: absolute;
           left: 0px; }
-          @media only screen and (max-width: 768px) {
+          @media only screen and (max-width: 767px) {
             body #page #intro .mountain_bg .left {
               background-size: cover;
               width: 219.5px;
@@ -306,7 +313,7 @@ body {
           background-size: cover;
           width: 586px;
           height: 383px; }
-          @media only screen and (max-width: 768px) {
+          @media only screen and (max-width: 767px) {
             body #page #intro .mountain_bg .right {
               background-size: cover;
               width: 293px;
@@ -316,9 +323,20 @@ body {
         background: url(../images/foreground.png) no-repeat center bottom;
         height: 700px;
         padding-top: 100px; }
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 1200px) {
           body #page #intro .foreground {
-            background-size: 100% auto; } }
+            background-size: 1200px auto;
+            height: 630px; } }
+        @media only screen and (max-width: 767px) {
+          body #page #intro .foreground {
+            background-size: 800px auto;
+            height: 406px; }
+            body #page #intro .foreground .applinks {
+              width: 320px;
+              padding: 0;
+              margin: 0 auto; }
+              body #page #intro .foreground .applinks .app_dl_link {
+                margin-top: 10px; } }
         body #page #intro .foreground h1 {
           margin: 0 auto;
           background: url(../images/dwtd_logo.png) no-repeat center center;
@@ -326,6 +344,11 @@ body {
           width: 279px;
           height: 114px;
           margin-bottom: 30px; }
+          @media only screen and (max-width: 767px) {
+            body #page #intro .foreground h1 {
+              background-size: cover;
+              width: 139.5px;
+              height: 57px; } }
         body #page #intro .foreground .station {
           background-size: cover;
           width: 465px;
@@ -333,7 +356,12 @@ body {
           background: url(../images/station.png) no-repeat center center;
           margin: 0 auto;
           position: relative; }
-          @media only screen and (max-width: 768px) {
+          @media only screen and (max-width: 1200px) {
+            body #page #intro .foreground .station {
+              background-size: cover;
+              width: 418.5px;
+              height: 255.6px; } }
+          @media only screen and (max-width: 767px) {
             body #page #intro .foreground .station {
               background-size: cover;
               width: 232.5px;
@@ -352,6 +380,13 @@ body {
             margin: 0 auto;
             position: relative;
             top: 100px; }
+            @media only screen and (max-width: 767px) {
+              body #page #intro .foreground .station .play_vid {
+                width: 120px;
+                top: 42px;
+                background-size: 20px auto;
+                padding-right: 22px;
+                line-height: 40px; } }
         body #page #intro .foreground .platform {
           max-width: 1200px;
           width: 100%;
@@ -359,9 +394,16 @@ body {
           background: url(../images/platform.png) no-repeat center right;
           background-size: contain;
           margin: 0 auto; }
-          @media only screen and (max-width: 1024px) {
+          @media only screen and (max-width: 1200px) {
             body #page #intro .foreground .platform {
-              width: 1024px; } }
+              height: 60px;
+              background: url(../images/platform.png) no-repeat center center;
+              background-size: contain; } }
+          @media only screen and (max-width: 1023px) {
+            body #page #intro .foreground .platform {
+              width: 100%;
+              background: url(../images/platform.png) no-repeat center center;
+              background-size: auto 60px; } }
           body #page #intro .foreground .platform .pledge {
             text-decoration: none;
             color: #656565;
@@ -371,17 +413,32 @@ body {
             margin-left: 250px;
             padding-left: 80px;
             background: url(../images/pledge_button.png) no-repeat center left; }
+            @media only screen and (max-width: 767px) {
+              body #page #intro .foreground .platform .pledge {
+                background: url(../images/pledge_button.png) no-repeat top center;
+                background-size: auto 21px;
+                margin: 0 auto;
+                height: 40px;
+                width: 290px;
+                padding: 0; } }
         body #page #intro .foreground .tracks {
           width: 100%;
           height: 60px;
           background: url(../images/tracks.png) no-repeat center center;
           margin: 0 auto; }
+          @media only screen and (max-width: 767px) {
+            body #page #intro .foreground .tracks {
+              height: 30px;
+              background-size: auto 30px; } }
         body #page #intro .foreground .fg_hills {
           height: 273px;
           background: no-repeat center center;
           background-size: contain;
           position: relative;
           top: -250px; }
+          @media only screen and (max-width: 767px) {
+            body #page #intro .foreground .fg_hills {
+              display: none; } }
           body #page #intro .foreground .fg_hills.left {
             background-image: url(../images/foreground_hill_l.png);
             width: 181px; }
@@ -408,30 +465,70 @@ body {
         position: relative;
         top: 60px;
         left: -12px; }
-        body #page #videos .vid_links .vids {
+        body #page #videos .vid_links ul.vids {
           list-style-type: none;
           padding: 0;
           margin: 0;
           overflow: hidden; }
-          body #page #videos .vid_links .vids > li {
+          body #page #videos .vid_links ul.vids > li {
             display: block;
             float: left; }
-            body #page #videos .vid_links .vids > li:last-child {
+            body #page #videos .vid_links ul.vids > li:last-child {
               margin-right: 0px; }
+          body #page #videos .vid_links ul.vids li a {
+            display: none; }
+            body #page #videos .vid_links ul.vids li a img {
+              width: 155px;
+              height: 110px; }
+            body #page #videos .vid_links ul.vids li a.active img {
+              opacity: 0.5; }
+            body #page #videos .vid_links ul.vids li a[data-index="1"], body #page #videos .vid_links ul.vids li a[data-index="2"], body #page #videos .vid_links ul.vids li a[data-index="3"], body #page #videos .vid_links ul.vids li a[data-index="4"], body #page #videos .vid_links ul.vids li a[data-index="5"] {
+              display: block;
+              position: absolute; }
+            body #page #videos .vid_links ul.vids li a[data-index="1"] {
+              top: 33px;
+              left: 13px;
+              -webkit-transform: rotate(4deg);
+              -moz-transform: rotate(4deg);
+              transform: rotate(4deg); }
+            body #page #videos .vid_links ul.vids li a[data-index="2"] {
+              top: 33px;
+              left: 207px;
+              -webkit-transform: rotate(-4deg);
+              -moz-transform: rotate(-4deg);
+              transform: rotate(-4deg); }
+            body #page #videos .vid_links ul.vids li a[data-index="3"] {
+              top: 32px;
+              left: 381px;
+              -webkit-transform: rotate(4deg);
+              -moz-transform: rotate(4deg);
+              transform: rotate(4deg); }
+            body #page #videos .vid_links ul.vids li a[data-index="4"] {
+              top: 32px;
+              left: 575px;
+              -webkit-transform: rotate(-5deg);
+              -moz-transform: rotate(-5deg);
+              transform: rotate(-5deg); }
+            body #page #videos .vid_links ul.vids li a[data-index="5"] {
+              top: 32px;
+              left: 749px;
+              -webkit-transform: rotate(4deg);
+              -moz-transform: rotate(4deg);
+              transform: rotate(4deg); }
         body #page #videos .vid_links .next {
           position: absolute;
-          right: 62px;
+          right: -70px;
           top: 70px;
-          -webkit-transform: rotate(5deg);
-          -moz-transform: rotate(5deg);
-          transform: rotate(5deg); }
+          -webkit-transform: rotate(-5deg);
+          -moz-transform: rotate(-5deg);
+          transform: rotate(-5deg); }
         body #page #videos .vid_links .prev {
           position: absolute;
           top: 69px;
-          left: 57px;
-          -webkit-transform: rotate(5deg);
-          -moz-transform: rotate(5deg);
-          transform: rotate(5deg); }
+          left: -76px;
+          -webkit-transform: rotate(-5deg);
+          -moz-transform: rotate(-5deg);
+          transform: rotate(-5deg); }
     body #page #leaderboard {
       background: #fbefc3;
       width: 100%;
