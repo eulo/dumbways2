@@ -40,9 +40,19 @@
         background: url(../images/foreground.png) no-repeat center bottom;
         height: 700px;
         padding-top: 100px;
-        @include respond-to(1200) {
+        @include respond-to($desktop) {
             background-size: 1200px auto;
             height: 630px;
+        }
+        @include respond-to($large) {
+            .applinks{
+                width: 320px;
+                padding: 0;
+                margin: 0 auto;
+                .app_dl_link{
+                    margin-top: 10px;
+                }
+            }
         }
         @include respond-to($med) {
             background-size: 800px auto;

@@ -2,11 +2,19 @@
     width: 100%;
     min-height: 1590px;
     background: url(../images/videos_bg.png) no-repeat center bottom #95be57;
+    @include respond-to($med) {
+      background-size: 800px auto;
+    }
     #vidplayer{
     	background: url(../images/vid_player_bg.png) no-repeat center center;
         @include scale_bg(1087,686,1);
         margin: 0 auto;
         position: relative;
+        @include respond-to($med) {
+          height: 216px;
+          width: 100%;
+          background-size: contain;
+        }
     }
 
     .vid_links{
