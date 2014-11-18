@@ -1,0 +1,437 @@
+﻿{"frames": [
+
+{
+	"filename": "FrozenIceCrack0001.png",
+	"frame": {"x":660,"y":1169,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0002.png",
+	"frame": {"x":660,"y":1169,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0003.png",
+	"frame": {"x":0,"y":0,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0004.png",
+	"frame": {"x":220,"y":0,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0005.png",
+	"frame": {"x":440,"y":1169,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0006.png",
+	"frame": {"x":440,"y":0,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0007.png",
+	"frame": {"x":660,"y":0,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0008.png",
+	"frame": {"x":0,"y":167,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0009.png",
+	"frame": {"x":220,"y":167,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0010.png",
+	"frame": {"x":660,"y":1002,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0011.png",
+	"frame": {"x":440,"y":167,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0012.png",
+	"frame": {"x":440,"y":1002,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0013.png",
+	"frame": {"x":660,"y":167,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0014.png",
+	"frame": {"x":0,"y":334,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0015.png",
+	"frame": {"x":220,"y":334,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0016.png",
+	"frame": {"x":0,"y":1002,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0017.png",
+	"frame": {"x":440,"y":334,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0018.png",
+	"frame": {"x":660,"y":334,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0019.png",
+	"frame": {"x":0,"y":501,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0020.png",
+	"frame": {"x":220,"y":501,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0021.png",
+	"frame": {"x":440,"y":501,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0022.png",
+	"frame": {"x":660,"y":501,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0023.png",
+	"frame": {"x":0,"y":668,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0024.png",
+	"frame": {"x":220,"y":835,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0025.png",
+	"frame": {"x":220,"y":668,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0026.png",
+	"frame": {"x":440,"y":668,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0027.png",
+	"frame": {"x":440,"y":668,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0028.png",
+	"frame": {"x":440,"y":668,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0029.png",
+	"frame": {"x":660,"y":668,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0030.png",
+	"frame": {"x":660,"y":668,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0031.png",
+	"frame": {"x":0,"y":835,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0032.png",
+	"frame": {"x":220,"y":835,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0033.png",
+	"frame": {"x":0,"y":668,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0034.png",
+	"frame": {"x":660,"y":501,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0035.png",
+	"frame": {"x":440,"y":835,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0036.png",
+	"frame": {"x":660,"y":835,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0037.png",
+	"frame": {"x":0,"y":501,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0038.png",
+	"frame": {"x":660,"y":334,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0039.png",
+	"frame": {"x":440,"y":334,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0040.png",
+	"frame": {"x":0,"y":1002,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0041.png",
+	"frame": {"x":220,"y":334,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0042.png",
+	"frame": {"x":220,"y":1002,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0043.png",
+	"frame": {"x":660,"y":167,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0044.png",
+	"frame": {"x":440,"y":1002,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0045.png",
+	"frame": {"x":440,"y":167,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0046.png",
+	"frame": {"x":660,"y":1002,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0047.png",
+	"frame": {"x":0,"y":1169,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0048.png",
+	"frame": {"x":220,"y":1169,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0049.png",
+	"frame": {"x":660,"y":0,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0050.png",
+	"frame": {"x":440,"y":0,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0051.png",
+	"frame": {"x":440,"y":1169,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0052.png",
+	"frame": {"x":660,"y":1169,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}
+,{
+	"filename": "FrozenIceCrack0053.png",
+	"frame": {"x":660,"y":1169,"w":220,"h":167},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":167},
+	"sourceSize": {"w":220,"h":167}
+}],
+"meta": {
+	"app": "Adobe Flash Professional",
+	"version": "14.0.0.110",
+	"Target": "Edge Animate",
+	"Target Version": "4.0",
+	"image": "FrozenIceCrack.png",
+	"format": "RGBA8888",
+	"size": {"w":1024,"h":1494},
+	"scale": "1"
+}
+}
