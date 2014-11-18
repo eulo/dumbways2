@@ -32,9 +32,35 @@ define(function(require, exports, module) {
 
     $cont.find('li a').click(function(event) {
       event.preventDefault();
+      var url = "//www.youtube.com/embed/"+$(this).data('video')+"?rel=0&amp;controls=1&amp;showinfo=0&amp;autoplay=1"
+      $("#vidplayer iframe").attr('src',url);
       $cont.find('li a').removeClass('active');
       $(this).addClass('active');
     });
+  }
+  var videoSliderMob = function($cont) {
+      var yt_ids = [];
+      var i = 0;
+      $('.vid_links li a').each(function(){
+          yt_ids.push($(this).data('video'))
+      })
+      $cont.find('.next, .prev').click(function(event) {
+        event.preventDefault();
+        
+        if($(this).hasClass('next')){
+          i++;
+          if(i == yt_ids.length ){
+            i = 0;
+          }
+        }else{
+          i--
+          if(i < 0){
+            i = yt_ids.length - 1;
+          }
+        }
+        var url = "//www.youtube.com/embed/"+yt_ids[i]+"?rel=0&amp;controls=1&amp;showinfo=0"
+        $("#vidplayer iframe").attr('src',url);
+      });
   }
 
   var initSlider = function($cont) {
@@ -88,5 +114,5 @@ define(function(require, exports, module) {
   initSlider($gifSlider);
   initSlider($wallpaperSlider);
   videoSlider($('.vid_links'), $('#vidplayer'));
-
+  videoSliderMob($('#vidplayer'));
 });
