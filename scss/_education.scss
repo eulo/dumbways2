@@ -79,6 +79,13 @@
 					background-size: 30px auto;
 				}
 			}
+			@include respond-to($large) {
+				padding-left: 0;
+				li{
+					margin-right: 0;
+				}
+			}
+
 		}
 	}
 
