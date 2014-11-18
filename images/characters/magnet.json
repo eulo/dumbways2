@@ -1,0 +1,427 @@
+﻿{"frames": [
+
+{
+	"filename": "magnet0001.png",
+	"frame": {"x":0,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0002.png",
+	"frame": {"x":0,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0003.png",
+	"frame": {"x":240,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0004.png",
+	"frame": {"x":240,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0005.png",
+	"frame": {"x":480,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0006.png",
+	"frame": {"x":480,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0007.png",
+	"frame": {"x":720,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0008.png",
+	"frame": {"x":720,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0009.png",
+	"frame": {"x":960,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0010.png",
+	"frame": {"x":960,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0011.png",
+	"frame": {"x":1200,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0012.png",
+	"frame": {"x":1440,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0013.png",
+	"frame": {"x":1680,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0014.png",
+	"frame": {"x":1920,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0015.png",
+	"frame": {"x":2160,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0016.png",
+	"frame": {"x":2400,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0017.png",
+	"frame": {"x":2640,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0018.png",
+	"frame": {"x":2880,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0019.png",
+	"frame": {"x":3120,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0020.png",
+	"frame": {"x":3360,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0021.png",
+	"frame": {"x":3600,"y":0,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0022.png",
+	"frame": {"x":0,"y":703,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0023.png",
+	"frame": {"x":240,"y":703,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0024.png",
+	"frame": {"x":480,"y":703,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0025.png",
+	"frame": {"x":720,"y":703,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0026.png",
+	"frame": {"x":960,"y":703,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0027.png",
+	"frame": {"x":1200,"y":703,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0028.png",
+	"frame": {"x":1440,"y":703,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0029.png",
+	"frame": {"x":1680,"y":703,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0030.png",
+	"frame": {"x":1920,"y":703,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0031.png",
+	"frame": {"x":2160,"y":703,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0032.png",
+	"frame": {"x":2400,"y":703,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0033.png",
+	"frame": {"x":2640,"y":703,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0034.png",
+	"frame": {"x":2880,"y":703,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0035.png",
+	"frame": {"x":3120,"y":703,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0036.png",
+	"frame": {"x":3360,"y":703,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0037.png",
+	"frame": {"x":3600,"y":703,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0038.png",
+	"frame": {"x":0,"y":1406,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0039.png",
+	"frame": {"x":240,"y":1406,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0040.png",
+	"frame": {"x":480,"y":1406,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0041.png",
+	"frame": {"x":720,"y":1406,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0042.png",
+	"frame": {"x":960,"y":1406,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0043.png",
+	"frame": {"x":960,"y":1406,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0044.png",
+	"frame": {"x":1200,"y":1406,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0045.png",
+	"frame": {"x":1200,"y":1406,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0046.png",
+	"frame": {"x":1440,"y":1406,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0047.png",
+	"frame": {"x":1440,"y":1406,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0048.png",
+	"frame": {"x":1680,"y":1406,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0049.png",
+	"frame": {"x":1680,"y":1406,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0050.png",
+	"frame": {"x":1920,"y":1406,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0051.png",
+	"frame": {"x":1920,"y":1406,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}
+,{
+	"filename": "magnet0052.png",
+	"frame": {"x":2160,"y":1406,"w":240,"h":703},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":703},
+	"sourceSize": {"w":240,"h":703}
+}],
+"meta": {
+	"app": "Adobe Flash Professional",
+	"version": "14.0.0.110",
+	"image": "magnet.png",
+	"format": "RGBA8888",
+	"size": {"w":4000,"h":2109},
+	"scale": "1"
+}
+}
