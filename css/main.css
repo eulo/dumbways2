@@ -3065,6 +3065,9 @@ body {
   body #page {
     max-width: 1600px;
     margin: 0 auto; }
+    @media only screen and (max-width: 1023px) {
+      body #page {
+        overflow: hidden; } }
     body #page #intro {
       max-width: 1600px;
       background: url(../images/bg_clouds.png) no-repeat fixed center top #96d2f9;
@@ -4102,6 +4105,13 @@ body {
         width: 100%;
         height: 120px;
         margin-bottom: 100px; }
+      @media only screen and (max-width: 767px) {
+        body #page footer {
+          background-size: 800px auto;
+          height: 365px; }
+          body #page footer .tracks {
+            background-size: 800px auto;
+            height: 60px; } }
       body #page footer .foot_links {
         max-width: 1200px;
         margin: 0 auto; }
