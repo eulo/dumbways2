@@ -88,6 +88,45 @@
 
 		}
 	}
+	.train_mask{
+		$tr_left : percentage(128/1600);
+		$tr_center : percentage(1343/1600);
+		$tr_right : percentage(129/1600);
+		width: $tr_center;
+		padding-bottom: 30.4%;
+        position: absolute;
+        bottom: 0px;
+        margin-left: $tr_left;
+        margin-right: $tr_right;
+        overflow: hidden;
+  	}
+	.train{
+	    background: url(../images/train-dark.png) no-repeat center bottom;
+		background-size: 100% auto;
+        width: 30%;
+        height: 40px;
+        position: absolute;
+        bottom: 35%;
+        left: -100px;
+        z-index: 0;
+        @include animation(0s,20s,train_dark);
+        @include animation-iteration-count(infinite);
+         span{
+            width: 75%;
+            display: block;
+            text-align: center;
+            padding-top: 2%;
+            font-size: 9px;
+            color: #ff6474;
+            text-transform: uppercase;
+            font-family: $bold;
+            text-shadow: 0px 0px 2px #000;
+         }
+        @include respond-to($large) {
+            display: none;
+        }
+    }
+
 
 	padding-bottom: 400px;
 	margin-bottom: 80px;
