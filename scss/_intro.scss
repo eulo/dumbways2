@@ -299,8 +299,10 @@
                 position: absolute;
                 bottom: 17px;
                 z-index: 0;
-                @include animation(0s,30s,train_top_better);
-                @include animation-iteration-count(infinite);
+                &.animate{
+                    @include animation(10s,30s,train_top_better);
+                    @include animation-iteration-count(infinite);
+                }
                 left: -1263px;
                  @include respond-to($med) {
                     display: none;
