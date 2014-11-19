@@ -452,9 +452,7 @@ body{
     #page{
         max-width: 1600px;
         margin: 0 auto;
-        @include respond-to($large) {
-            overflow: hidden;
-        }
+        overflow: hidden;
 
         @import "intro";
 
