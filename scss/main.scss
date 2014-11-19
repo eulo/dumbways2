@@ -310,17 +310,6 @@ $bold : CooperBT-Bold, Georgia, Times, "Times New Roman", serif;
         @include vendor-prefix('transform', 'rotate(40deg)');
     }
 }
-@include keyframe(train_top) {
-    0% {
-        width: 300%
-    }
-    10% {
-        width: 0%;
-    }
-    100% {
-        width: 0%;
-    }
-}
 @include keyframe(train_top_better) {
     0% {
         left: -1263px;
@@ -330,6 +319,17 @@ $bold : CooperBT-Bold, Georgia, Times, "Times New Roman", serif;
     }
     100% {
         left: 100%
+    }
+}
+@include keyframe(train_from_right) {
+    0% {
+        right : -600px;
+    }
+    30% {
+        right: 100%
+    }
+    100% {
+        right: 100%
     }
 }
 
