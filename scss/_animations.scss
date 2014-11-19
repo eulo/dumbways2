@@ -974,30 +974,30 @@ Copyright (c) 2014 Daniel Eden
 }
 
 @-webkit-keyframes bounceOutRight {
-  20% {
+  0% {
     opacity: 1;
-    -webkit-transform: translate3d(-20px, 0, 0);
-            transform: translate3d(-20px, 0, 0);
+    -webkit-transform: translate3d(0px, 0, 0);
+            transform: translate3d(0px, 0, 0);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(2000px, 0, 0);
-            transform: translate3d(2000px, 0, 0);
+    -webkit-transform: translate3d(2000px, -800px, 0);
+            transform: translate3d(2000px, -800px, 0);
   }
 }
 
 @keyframes bounceOutRight {
-  20% {
+  0% {
     opacity: 1;
-    -webkit-transform: translate3d(-20px, 0, 0);
-            transform: translate3d(-20px, 0, 0);
+    -webkit-transform: translate3d(0px, 0, 0);
+            transform: translate3d(0px, 0, 0);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(2000px, 0, 0);
-            transform: translate3d(2000px, 0, 0);
+    -webkit-transform: translate3d(2000px, -800px, 0);
+            transform: translate3d(2000px, -800px, 0);
   }
 }
 

@@ -5,6 +5,14 @@
 	z-index: 10;
   .character {
     position:absolute;
+    &.rocket {
+      margin-left:350px;
+      margin-top:-170px;
+      z-index:6;
+      @include respond-to($med) {
+        display:none;
+      }
+    }
     &.curling {
       left:20px;
       bottom:300px;
@@ -36,6 +44,18 @@
         @include respond-to($med) {
           display: none;
         }
+    }
+  }
+  .ski_jump {
+    width:447px;
+    height:276px;
+    background:url(../images/ski-jump.png) no-repeat;
+    position:absolute;
+    top:-60px;
+    z-index:2;
+    left:270px;
+    @include respond-to($med) {
+      display:none;
     }
   }
 	.snow_mountains{
@@ -111,6 +131,7 @@
 		background-size: auto 100%;
 		width: 100%;
 		position: absolute;
+    z-index:4;
 		top: -250px;
 		@include respond-to($large) {
 			top: -160px;

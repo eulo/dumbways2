@@ -55,7 +55,7 @@ define(function(require, exports, module) {
                 });
 
               if (data.alternate === true) {
-                if (dir === true && i + 1 >= l) {
+                if (dir === true && i + 1 >= l || (data.framestall !== void 0 && i + 1 >= data.framestall)) {
                   dir = false;
                 } else if (dir === false && i - 1 < 0 && !frun) {
                   // trigger pause
@@ -67,7 +67,7 @@ define(function(require, exports, module) {
                 i = dir ? i + 1 : i - 1;
               } else {
                 i++;
-                if (i >= l) 
+                if (i >= l || (data.framestall !== void 0 && i >= data.framestall)) 
                   i = 0; 
               }
               if (data.pause !== void 0)
@@ -108,6 +108,8 @@ define(function(require, exports, module) {
                 // Check to see if animation as finished
                 if (++i >= l) {
                   clearInterval(interval);
+                  if (data.callback !== void 0)
+                    $this.addClass(data.callback);
                 }
 
               }, 1000 / data.fps);

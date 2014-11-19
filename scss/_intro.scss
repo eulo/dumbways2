@@ -285,6 +285,13 @@
                 height: 30px;
                 background-size: auto 30px;
             } 
+            .character {
+              position:absolute;
+              &.car {
+                left: 300px;
+                top: 0;
+              }
+            }
             .train{
                 background: url(../images/train-top.png) no-repeat center left;
                 width: 1263px;

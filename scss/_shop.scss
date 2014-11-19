@@ -63,6 +63,13 @@
 	            right:20px;
 	          }
 	        }
+          &.weightlifter {
+            bottom:-100px;
+            left:10px;
+            @include respond-to($med) {
+              display:none;
+            }
+          }
 	      }
 	      .searchlight{
 	      	background: url(../images/searchlight.png) no-repeat center bottom;
