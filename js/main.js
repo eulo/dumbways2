@@ -26,7 +26,6 @@ require(['config'], function() {
       }
 
       $(window).scroll(function(event) {
-          console.log($(window).scrollTop());
           $('.mountain_bg').css('transform','translate(0px,'+($(window).scrollTop()/2)+'px)')
       });
   });
