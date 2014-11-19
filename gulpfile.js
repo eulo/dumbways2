@@ -19,10 +19,10 @@ gulp.task('sass', function () {
 });
 
 gulp.task('mincss',['sass'],function(){
-		gulp.src(['./css/normalize.css','./css/main.css'])
-		.pipe(gp_concat('main.big.css'))
-		.pipe(gulp.dest('./css'))
-		.pipe(minifyCss())
+	gulp.src(['./css/normalize.css','./css/main.css'])
+	.pipe(gp_concat('main.big.css'))
+	.pipe(gulp.dest('./css'))
+	.pipe(minifyCss())
        	.pipe(rename('main.min.css'))
        	.pipe(gulp.dest('./css'))
 })

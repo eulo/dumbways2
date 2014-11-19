@@ -5,5 +5,5 @@ composer.lock
 .DS_Store
 Thumbs.db
 *.DS_Store
-/css/**
-/node_modules/*
+css/*
+node_modules/*
