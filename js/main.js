@@ -28,5 +28,9 @@ require(['config'], function() {
       $(window).scroll(function(event) {
           $('.mountain_bg').css('transform','translate(0px,'+($(window).scrollTop()/2)+'px)')
       });
+
+      window.im_a_train = function(text){
+        $('.train span').html(text);
+      }
   });
 });
