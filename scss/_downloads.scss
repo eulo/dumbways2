@@ -13,6 +13,14 @@
         display: none;
       }
     }
+    &.curling-mine {
+      left: 200px;
+      bottom: 300px;
+      z-index:11;
+      @include respond-to($med) {
+        display: none;
+      }
+    }
     &.yeti {
       right:20px;
       top: 0px;
