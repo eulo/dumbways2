@@ -12,6 +12,10 @@
       @include respond-to($med) {
         display:none;
       }
+      @include respond-to($large) {
+        margin-left:-30px;
+        margin-top:-320px;
+      }
     }
     &.curling {
       left:20px;
@@ -49,13 +53,18 @@
   .ski_jump {
     width:447px;
     height:276px;
-    background:url(../images/ski-jump.png) no-repeat;
+    background:url(../images/ski-jump.png) no-repeat top right;
     position:absolute;
     top:-60px;
     z-index:2;
     left:270px;
     @include respond-to($med) {
       display:none;
+    }
+    @include respond-to($large) {
+      left:0;
+      top: -205px;
+      width:330px;
     }
   }
 	.snow_mountains{
