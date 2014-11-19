@@ -25,6 +25,8 @@ require(['config'], function() {
         setTimeout(function(){r.remove()},500)
       }
 
-
+      $(window).scroll(function(event) {
+          $('.mountain_bg').css('transform','translate(0px,'+($(window).scrollTop()/2)+'px)')
+      });
   });
 });
