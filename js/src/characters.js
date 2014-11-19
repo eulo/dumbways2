@@ -37,34 +37,82 @@ define(function(require, exports, module) {
             , l = res.frames.length
             , dir = true
             , frun = true
-            , pause;
+            , pause
+            , interval;
 
-          setInterval(function() {
+          if (data.framestall === void 0 || data.framestall !== 1) {
+            interval = setInterval(function() {
+              $this.css({
+                'width': res.frames[i].frame.w + 'px',
+                'height': res.frames[i].frame.h + 'px',
+                'background-position': -res.frames[i].frame.x + 'px ' + -res.frames[i].frame.y +'px'
+              }); 
+              // If dimensions of image change during animation
+              if (data.dimchange !== void 0)
+                $this.css({
+                'left': res.frames[i].spriteSourceSize.x + 'px',
+                'top': res.frames[i].spriteSourceSize.y  + 'px'
+                });
+
+              if (data.alternate === true) {
+                if (dir === true && i + 1 >= l) {
+                  dir = false;
+                } else if (dir === false && i - 1 < 0 && !frun) {
+                  // trigger pause
+                  if (data.pause !== void 0 && --pause > 0) {
+                    return; 
+                  }
+                  dir = true;
+                }
+                i = dir ? i + 1 : i - 1;
+              } else {
+                i++;
+                if (i >= l) 
+                  i = 0; 
+              }
+              if (data.pause !== void 0)
+                pause = data.pause * data.fps;
+              frun = false;
+            }, 1000 / data.fps );
+          } else {
+            // Init first frame
             $this.css({
               'width': res.frames[i].frame.w + 'px',
               'height': res.frames[i].frame.h + 'px',
               'background-position': -res.frames[i].frame.x + 'px ' + -res.frames[i].frame.y +'px'
             }); 
-            if (data.alternate === true) {
-              if (dir === true && i + 1 >= l) {
-                dir = false;
-              } else if (dir === false && i - 1 < 0 && !frun) {
-                // trigger pause
-                if (data.pause !== void 0 && --pause > 0) {
-                  return; 
+            if (data.dimchange !== void 0)
+              $this.css({
+              'left': res.frames[i].spriteSourceSize.x + 'px',
+              'top': res.frames[i].spriteSourceSize.y  + 'px'
+              });
+          }
+
+          if (data.framestall !== void 0) {
+            $this.click(function(event) {
+              $this.unbind('click');
+              clearInterval(interval);
+              interval = setInterval(function() {
+                $this.css({
+                  'width': res.frames[i].frame.w + 'px',
+                  'height': res.frames[i].frame.h + 'px',
+                  'background-position': -res.frames[i].frame.x + 'px ' + -res.frames[i].frame.y +'px'
+                }); 
+                // If dimensions of image change during animation
+                if (data.dimchange !== void 0) {
+                  $this.css({
+                  'left': res.frames[i].spriteSourceSize.x + 'px',
+                  'top': res.frames[i].spriteSourceSize.y  + 'px'
+                  });
                 }
-                dir = true;
-              }
-              i = dir ? i + 1 : i - 1;
-            } else {
-              i++;
-              if (i >= l) 
-                i = 0; 
-            }
-            if (data.pause !== void 0)
-              pause = data.pause * data.fps;
-            frun = false;
-          }, 1000 / data.fps );
+                // Check to see if animation as finished
+                if (++i >= l) {
+                  clearInterval(interval);
+                }
+
+              }, 1000 / data.fps);
+            });
+          }
           // Animate css3
           $this.addClass(data.class);
         });
@@ -80,7 +128,7 @@ define(function(require, exports, module) {
 
         // Do animation
         setTimeout(function() {
-          if (data.framestall === void 0 || data.framestall !== 1)
+          if (data.framestall === void 0 || data.framestall !== 1) {
             interval = setInterval(function() {
 
               if (pos - data.height < 0 && !frun) {
@@ -112,6 +160,7 @@ define(function(require, exports, module) {
                 'background-position': '0px ' + -pos + 'px'
               }); 
             }, 1000 / data.fps);
+          }
           // Animate css3
           $this.addClass(data.class);
           // Make clickable

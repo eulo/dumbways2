@@ -78,17 +78,16 @@
                 .app_dl_link{
                     margin-top: 0;
                 }
-                .run_char{
-                    background: url(../images/loopy.png) no-repeat;
-                    @include scale_bg(147,201,1);
-                    position: absolute;
-                    top: -110px;
-                    right: 0px;
-                    @include respond-to($large) {
-                        top: -70px;
-                        @include scale_bg(147,201,.7);
+                .character {
+                  position:absolute;
+                  &.javelin {
+                    margin-top:-300px;
+                    margin-left:60px;
+                    @include respond-to($med) {
+                      display:block;
                     }
-                }
+                  }
+                } 
             }
         }
         @include respond-to($large) {
