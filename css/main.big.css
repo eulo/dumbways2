@@ -842,24 +842,24 @@ Copyright (c) 2014 Daniel Eden
     transform: none; }
 
   15% {
-    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
-    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg); }
+    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -5deg); }
 
   30% {
-    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg); }
+    -webkit-transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 3deg); }
 
   45% {
-    -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg); }
+    -webkit-transform: translate3d(-4%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    transform: translate3d(-4%, 0, 0) rotate3d(0, 0, 1, -3deg); }
 
   60% {
-    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg); }
+    -webkit-transform: translate3d(3%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    transform: translate3d(3%, 0, 0) rotate3d(0, 0, 1, 2deg); }
 
   75% {
-    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg); }
+    -webkit-transform: translate3d(-1%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    transform: translate3d(-1%, 0, 0) rotate3d(0, 0, 1, -1deg); }
 
   100% {
     -webkit-transform: none;
@@ -3058,6 +3058,38 @@ Copyright (c) 2014 Daniel Eden
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp; }
 
+@-webkit-keyframes curling {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+
+  50% {
+    -webkit-transform: translateX(40px);
+    transform: translateX(40px); }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+
+@keyframes curling {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+
+  50% {
+    -webkit-transform: translateX(40px);
+    transform: translateX(40px); }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+
+.curlWalk {
+  -webkit-animation-name: curling;
+  animation-name: curling;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s; }
+
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -3592,10 +3624,8 @@ body {
     background-size: 50% auto; }
   body #page {
     max-width: 1600px;
-    margin: 0 auto; }
-    @media only screen and (max-width: 1023px) {
-      body #page {
-        overflow: hidden; } }
+    margin: 0 auto;
+    overflow: hidden; }
     body #page #intro {
       max-width: 1600px;
       background: url(../images/bg_clouds.png) no-repeat fixed center top #96d2f9;
@@ -4222,6 +4252,13 @@ body {
       z-index: 10; }
       body #page #downloads .character {
         position: absolute; }
+        body #page #downloads .character.curling {
+          left: 20px;
+          bottom: 300px;
+          z-index: 10; }
+          @media only screen and (max-width: 767px) {
+            body #page #downloads .character.curling {
+              display: none; } }
         body #page #downloads .character.yeti {
           right: 20px;
           top: 0px;

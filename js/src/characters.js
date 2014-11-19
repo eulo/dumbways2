@@ -26,8 +26,7 @@ define(function(require, exports, module) {
     }
     // css animation
     setTimeout(function(){
-      //$this.addClass(data.class);
-    }, Math.random() * 1000);
+    }, Math.random() * 4000);
 
     var img = new Image();
     img.onload = function() {
@@ -66,6 +65,8 @@ define(function(require, exports, module) {
               pause = data.pause * data.fps;
             frun = false;
           }, 1000 / data.fps );
+          // Animate css3
+          $this.addClass(data.class);
         });
 
       } else {
@@ -110,8 +111,9 @@ define(function(require, exports, module) {
               $this.css({
                 'background-position': '0px ' + -pos + 'px'
               }); 
-          }, 1000 / data.fps);
-
+            }, 1000 / data.fps);
+          // Animate css3
+          $this.addClass(data.class);
           // Make clickable
           if (data.framestall !== void 0) {
             $this.click(function(event) {
@@ -131,7 +133,7 @@ define(function(require, exports, module) {
             });
           }
 
-        }, Math.random() * 1000);
+        }, Math.random() * 2500);
       }
     };
     img.src = data.file;
