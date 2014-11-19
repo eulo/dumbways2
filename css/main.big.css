@@ -4117,12 +4117,13 @@ body {
         body #page #leaderboard .sand_top .character {
           position: absolute; }
           body #page #leaderboard .sand_top .character.whale {
-            right: -35px;
+            right: 0px;
+            max-width: 338px;
             bottom: 0;
-            z-index: 2; }
+            z-index: 3; }
             @media only screen and (max-width: 767px) {
               body #page #leaderboard .sand_top .character.whale {
-                right: -100px; } }
+                max-width: 273px; } }
           body #page #leaderboard .sand_top .character.flag02 {
             top: -100px; }
             body #page #leaderboard .sand_top .character.flag02.left-flag {
@@ -4131,7 +4132,11 @@ body {
               right: 20%; }
           body #page #leaderboard .sand_top .character.pool {
             left: 30%;
-            top: 0; }
+            top: 0;
+            z-index: 2; }
+            @media only screen and (max-width: 767px) {
+              body #page #leaderboard .sand_top .character.pool {
+                left: 30px; } }
       body #page #leaderboard .board {
         width: 1224px;
         margin: 0 auto;
