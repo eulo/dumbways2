@@ -14,11 +14,12 @@
 	    .character {
         position:absolute;
         &.whale {
-          right: -35px;
+          right: 0px;
+          max-width:338px;
           bottom:0;
-          z-index:2;
+          z-index:3;
           @include respond-to($med) {
-            right:-100px;
+            max-width:273px
           }
         }
         &.flag02 {
@@ -34,6 +35,10 @@
           // guy in speedos, i dunno why he's called pool
           left: 30%;
           top:0;
+          z-index:2;
+          @include respond-to($med) {
+            left: 30px;
+          }
         }
 	    }
 	}
