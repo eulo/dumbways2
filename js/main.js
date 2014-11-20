@@ -30,7 +30,145 @@ require(['config'], function() {
       });
 
       window.im_a_train = function(text){
-        $('.train span').html(text);
+        if(text == 'caaage'){
+          $('.train span').first().append('<img src="http://ih2.redbubble.net/image.14928045.9401/sticker,375x360.u6.png" style="float:right;margin-top:-80px;margin-right:-100px;"/>');
+        }else{
+          $('.train span').html(text);
+        }
       }
+
+      $('[data-analytics]').click(function(){
+        var a = $(this).data('analytics');
+        _gaq.push(['_trackEvent', a[0], a[1], a[2]]);
+      });
+      
+
+      data = $.parseJSON('{"top_scores":[{"name":"Sergio Mil\u00e1n","facebook_id":null,"score":"3299"},{"name":"Harunchai Paecharoenchai","facebook_id":null,"score":"2950"},{"name":"Julius Vet\u00e4m\u00e4j\u00e4rvi","facebook_id":"10204417397067101","score":"2763"},{"name":"Колмогоров","facebook_id":null,"score":"2668"},{"name":null,"facebook_id":null,"score":"2665"},{"name":null,"facebook_id":null,"score":"2634"},{"name":null,"facebook_id":null,"score":"2565"},{"name":null,"facebook_id":null,"score":"2564"},{"name":null,"facebook_id":null,"score":"2530"},{"name":null,"facebook_id":null,"score":"2500"},{"name":null,"facebook_id":null,"score":"2488"},{"name":null,"facebook_id":null,"score":"2463"},{"name":null,"facebook_id":null,"score":"2461"},{"name":null,"facebook_id":null,"score":"2456"},{"name":null,"facebook_id":null,"score":"2452"},{"name":null,"facebook_id":null,"score":"2411"},{"name":null,"facebook_id":null,"score":"2400"},{"name":null,"facebook_id":null,"score":"2395"},{"name":null,"facebook_id":null,"score":"2378"},{"name":null,"facebook_id":null,"score":"2368"},{"name":null,"facebook_id":null,"score":"2355"},{"name":null,"facebook_id":null,"score":"2353"},{"name":null,"facebook_id":null,"score":"2350"},{"name":null,"facebook_id":null,"score":"2348"},{"name":null,"facebook_id":null,"score":"2341"},{"name":null,"facebook_id":null,"score":"2323"},{"name":null,"facebook_id":null,"score":"2318"},{"name":"Patrick Trethowan","facebook_id":"10154692830720167","score":"2314"},{"name":null,"facebook_id":null,"score":"2310"},{"name":null,"facebook_id":null,"score":"2301"},{"name":null,"facebook_id":null,"score":"2300"},{"name":null,"facebook_id":null,"score":"2298"},{"name":null,"facebook_id":null,"score":"2287"},{"name":null,"facebook_id":null,"score":"2273"},{"name":null,"facebook_id":null,"score":"2270"},{"name":null,"facebook_id":null,"score":"2269"},{"name":null,"facebook_id":null,"score":"2265"},{"name":null,"facebook_id":null,"score":"2261"},{"name":null,"facebook_id":null,"score":"2261"},{"name":null,"facebook_id":null,"score":"2261"},{"name":null,"facebook_id":null,"score":"2261"},{"name":null,"facebook_id":null,"score":"2259"},{"name":null,"facebook_id":null,"score":"2252"},{"name":"Nicol\u00e1s Pombo","facebook_id":"10204490688740231","score":"2251"},{"name":null,"facebook_id":null,"score":"2245"},{"name":null,"facebook_id":null,"score":"2244"},{"name":null,"facebook_id":null,"score":"2233"},{"name":null,"facebook_id":null,"score":"2218"},{"name":null,"facebook_id":null,"score":"2213"},{"name":null,"facebook_id":null,"score":"2209"}]}')
+      
+
+      // function scores(url){
+      //   $.ajax({
+      //     dataType: "jsonp",
+      //     url: "https://dumbways.millipede.com.au/leaderboard/"+url+"/",
+      //     jsonpCallback: "scoresCallback",
+      //     success: function ( data ) {
+      //       var leaders = "<ol>";
+
+      //       $.each(data.top_scores, function(index, val) {
+      //         var name = (val.name != null) ? val.name : "......" ;
+      //         leaders += "<li><span class='name'>"+name+"</span> <span class='right'>"+val.score+"</span></li>";
+      //         if(index >= 3){
+      //           leaders += "<li class='hidden'><span class='name'>"+name+"</span> <span class='right'>"+val.score+"</span></li>";
+      //         }
+      //         if(index == 11){
+      //           return false;
+      //         }
+      //       });
+      //       leaders += "</ol>"
+
+      //       $('#leaderboard .content .'+url+' span').replaceWith(leaders);
+      //     },
+      //     error: function (XMLHttpRequest, textStatus, errorThrown) {
+      //          console.log(textStatus, errorThrown);
+      //     }
+
+      //   });
+      // };
+      var dt = [];
+
+      function scores( data , url ) {
+            if(data.error){
+              $('#leaderboard .content .'+url+' span').html("Error fetching data");
+              return false;
+            }
+
+            var leaders = "<ol>";
+
+            $.each(data.top_scores, function(index, val) {
+              var pic = "";
+              if (val.facebook_id != null){
+                pic = "<span class='fb_pic' data-id='"+val.facebook_id+"'></span>";
+              }else{
+                pic = "<img src='images/meta/apple-touch-icon-60x60.png' width='30' height='30' />"
+              }
+              var name = (val.name != null) ? val.name : "Unknown" ;
+
+              if(index >= 4){
+                leaders += "<li class='hidden'><span class='name'>"+name+"</span> <span class='right'>"+val.score+"</span></li>";
+              }else{
+                leaders += "<li><span class='name'>"+pic+name+"</span> <span class='right'>"+val.score+"</span></li>";
+              }
+              if(index == 11){
+                return false;
+              }
+            });
+            leaders += "</ol>";
+            leaders += '<a href="#" class="show_more">VIEW MORE</a>';
+
+            $l = $(leaders);
+
+            $l.find('.fb_pic').each(function(i,v){
+              var $t = $(this);
+              /* make the API call */
+                FB.api(
+                    "/"+$t.data('id')+"/picture",
+                    {
+                        "redirect": false,
+                        "height": "60",
+                        "type": "normal",
+                        "width": "60"
+                    },
+                    function (response) {
+                      if (response && !response.error) {
+                        $t.replaceWith("<img src='"+response.data.url+"' width='30' height='30' />");
+                      }else{
+                      }
+                    }
+                );
+            })
+
+            $('#leaderboard .content .'+url+' span').replaceWith($l);
+
+          }
+      setTimeout(function(){
+
+          if(typeof freezerville !== "undefined"){
+            scores(freezerville, "freezerville");
+          }else{
+            scores({"error":true},"freezerville");
+          }
+        
+          if(typeof drowntown !== "undefined"){
+            scores(drowntown, "drowntown");
+          }else{
+            scores({"error":true},"drowntown");
+          }
+        
+          if(typeof dumbest !== "undefined"){
+            scores(dumbest, "dumbest");
+          }else{
+            scores({"error":true},"dumbest");
+          }
+        
+          if(typeof dumbdome !== "undefined"){
+            scores(dumbdome, "dumbdome");
+          }else{
+            scores({"error":true},"dumbdome");
+          }
+        
+          // if(typeof adrenaland !== "undefined"){
+          //   scores(adrenaland, "adrenaland");
+          // }else{
+          //   scores({"error":true},"adrenaland");
+          // }
+
+      },5000)
+      // scores("drowntown");
+      // scores("dumbest");
+      // scores("dumbdome");
+      // scores("adrenaland");
+
+
+
   });
 });
