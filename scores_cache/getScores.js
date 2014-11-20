@@ -8,7 +8,7 @@ var url = "http://dumbways.millipede.com.au/leaderboard/"
   , finalData = []; 
 
 var writeToFile = function() {
-  fs.writeFile("./scores", finalData, function(err) {
+  fs.writeFile("./scores.js", finalData, function(err) {
     //JSON.stringify(json)
     if (err)
       console.log(err);
