@@ -91,7 +91,7 @@ define(function(require, exports, module) {
           if (data.framestall !== void 0) {
             $this.click(function(event) {
               $this.unbind('click');
-              var stime = new Date();
+              //var stime = new Date();
               clearInterval(interval);
               // Add onclick css3 animation
               if (data.click !== void 0)
@@ -112,8 +112,9 @@ define(function(require, exports, module) {
                 }
                 // Check to see if animation as finished
                 if (++i >= l) {
-                  console.log(new Date() - stime);
+                  //console.log(new Date() - stime);
                   clearInterval(interval);
+                  $this.removeClass(data.class);
                   if (data.callback !== void 0)
                     $this.addClass(data.callback);
                 }

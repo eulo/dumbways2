@@ -104,6 +104,21 @@
             @include scale_bg(328,530,.3);
             right:20px;
           }
+
+          .dude-in-booth {
+            background:url(../images/dude-in-booth.png) no-repeat;
+            width:185px;
+            height:165px;
+            position:absolute;
+            top: 146px;
+            left: 28px;
+            @include respond-to($med) {
+              @include scale_bg(185, 165, .3);
+              top: 54px;
+              left: 13px;
+            }
+              
+          }
         }
 
 			.shop_tent{
