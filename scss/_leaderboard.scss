@@ -73,12 +73,15 @@
 		}
 		.content{
 			font-size: 16px;
+			max-width: 1024px;
+			margin: 0 auto;
+			margin-top: -100px;
 			@include respond-to($med) {
 				font-size: 10px;
+				max-width: 300px;
 			}
 			text-align: center;
 			color: $black;
-			margin-top: -100px;
 			p{
 				font-size: em(20);
 			}
@@ -88,6 +91,7 @@
 			.applinks{
 				padding-bottom: 0;
 				margin-bottom: -40px;
+				clear: both;
 			}
 			.coming_soon{
 				width: 419px;
@@ -114,6 +118,55 @@
 					}
 				}
 
+			}
+			.leaders{
+				width: 50%;
+				display: block;
+				float: left;
+				margin-top: 40px;
+				min-height: 282px;
+				//display: none;
+				@include respond-to($med) {
+					width: 96%;
+				}
+				
+				h3{
+					// text-transform: uppercase;
+				}
+				ol{
+					width: 80%;
+					margin: 0 auto;
+					li{
+						&:first-child{
+							font-family: $bold;
+						}
+						font-size: em(24);
+						text-align: left;
+						line-height: 40px;
+						img{
+							margin-right: 10px;
+							border-radius: 5px;
+						}
+						&.hidden{
+							display: none;
+						}
+					}
+
+				}
+				a.show_more{
+			        width: 110px;
+			        height:26px;
+			        display: block;
+			        line-height: 30px;
+			        border-radius: 14px;
+			        display: block;
+			        padding: 0 14px;
+			        margin: 0 auto;
+			        color: #ffffff;
+			        text-decoration: none;
+			        margin-top: 20px;
+					@include share_button(#ffc228,#ffe273);
+				}
 			}
 		}
 		.bottom{
