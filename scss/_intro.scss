@@ -156,6 +156,10 @@
               &.snake {
                 top:206px;
                 left:292px;
+                @include respond-to($desktop) {
+                  top: 182px;
+                  left:257px;
+                }
               }
               &.glue {
                 top: 170px;
