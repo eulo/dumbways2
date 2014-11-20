@@ -82,6 +82,14 @@ define(function(require,  exports, module) {
     scrollTo($('#vidplayer'));
   });
 
+  // bind for car guy, cos he's behind and element
+  $('.boomgate').click(function(event) {
+    $('.car').click();
+    setTimeout(function() {
+      $('.train.right-train').addClass('animate');
+    }, 1500);
+  });
+
   function scrollTo(el, time) {
     var target = $(el);
     //target = target.length ? target : $('[name=' + this.hash.slice(1) +']');

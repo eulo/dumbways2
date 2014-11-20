@@ -471,6 +471,8 @@ Copyright (c) 2014 Daniel Eden
 .wobble {
   -webkit-animation-name: wobble;
           animation-name: wobble;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 
 @-webkit-keyframes bounceIn {
@@ -3192,4 +3194,108 @@ Copyright (c) 2014 Daniel Eden
           animation-name: curling;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+}
+
+@-webkit-keyframes bob {
+  0%, 100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+}
+
+@keyframes bob {
+  0%, 100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+}
+
+.bob {
+  -webkit-animation-name: bob;
+          animation-name: bob;
+  -webkit-transform-origin: center bottom;
+      -ms-transform-origin: center bottom;
+          transform-origin: center bottom;
+}
+
+@-webkit-keyframes float {
+  0%, 100% {
+    -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg);
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg);
+  }
+
+  50% {
+    -webkit-transform: scale3d(0.95, 0.95, 1) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(0.95, 0.95, 1) rotate3d(0, 0, 1, -3deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg);
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg);
+  }
+
+  50% {
+    -webkit-transform: scale3d(0.95, 0.95, 1) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(0.95, 0.95, 1) rotate3d(0, 0, 1, -3deg);
+  }
+}
+
+.float {
+  -webkit-animation-name: float;
+          animation-name: float;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+@-webkit-keyframes totracks {
+  0%, 39% {
+    -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg) translate3d(0,0,0);
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg) translate3d(0,0,0);
+  }
+
+  47%, 63% {
+    -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg) translate3d(-150px,0,0);
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg) translate3d(-150px,0,0);
+  }
+
+  78%, 80% {
+    -webkit-transform: scale3d(1.05, 1.05, 1) rotate3d(0, 0, 1, 0deg) translate3d(-150px,50px,0);
+            transform: scale3d(1.05, 1.05, 1) rotate3d(0, 0, 1, 0deg) translate3d(-150px,50px,0);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1.55, 1.55, 1) rotate3d(0, 0, 1, 0deg) translate3d(-500px,-200px,0);
+            transform: scale3d(1.55, 1.55, 1) rotate3d(0, 0, 1, 0deg) translate3d(-500px,-200px,0);
+  }
+}
+
+@keyframes totracks {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg) translate3d(0,0,0);
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg) translate3d(0,0,0);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1.05, 1.05, 1) rotate3d(0, 0, 1, 0deg) translate3d(0,60px,0);
+            transform: scale3d(1.05, 1.05, 1) rotate3d(0, 0, 1, 0deg) translate3d(0,60px,0);
+  }
+}
+
+.totracks {
+  -webkit-animation-name: totracks;
+          animation-name: totracks;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
 }

@@ -8,7 +8,7 @@ require(['config'], function() {
       ]);
 
 
-      $("#chars, #stage, #intro .train").addClass('animate');
+      $("#chars, #stage, #intro .train.left-train").addClass('animate');
       setInterval(showtime,700);
       setInterval(showtime,500);
       setInterval(showtime,900);
