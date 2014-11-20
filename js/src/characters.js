@@ -91,7 +91,12 @@ define(function(require, exports, module) {
           if (data.framestall !== void 0) {
             $this.click(function(event) {
               $this.unbind('click');
+              var stime = new Date();
               clearInterval(interval);
+              // Add onclick css3 animation
+              if (data.click !== void 0)
+                $this.addClass(data.click);
+
               interval = setInterval(function() {
                 $this.css({
                   'width': res.frames[i].frame.w + 'px',
@@ -107,6 +112,7 @@ define(function(require, exports, module) {
                 }
                 // Check to see if animation as finished
                 if (++i >= l) {
+                  console.log(new Date() - stime);
                   clearInterval(interval);
                   if (data.callback !== void 0)
                     $this.addClass(data.callback);
@@ -118,7 +124,7 @@ define(function(require, exports, module) {
           // Animate css3
           $this.addClass(data.class);
         });
-
+        // END JSON 
       } else {
         // simple animation
         data.maxHeight = this.height;

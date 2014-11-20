@@ -64,7 +64,7 @@
 
             }
             @include respond-to($large) {
-                margin-top: 0;
+                margin-top: 10px;
                 width: 240px;
             }
             @include respond-to($med) {
@@ -287,11 +287,23 @@
             } 
             .character {
               position:absolute;
+              @include respond-to($large) {
+                display: none;
+              }
               &.car {
-                left: 300px;
-                top: 0;
+                left: 50%;
+                top: -140px;
+                z-index: 0;
+                margin-left: -550px;
+              }
+              &.boomgate {
+                top: -167px;
+                left: 50%;
+                margin-left: -556px;
+                cursor:pointer;
               }
             }
+            
             .train{
                 background: url(../images/train-top.png) no-repeat center left;
                 width: 1263px;
@@ -302,6 +314,14 @@
                 &.animate{
                     @include animation(10s,30s,train_top_better);
                     @include animation-iteration-count(infinite);
+                }
+                &.right-train {
+                  left:auto;
+                  right: -1263px;
+                  &.animate {
+                    @include animation(0s,10s,train_top_better_from_right);
+                    @include animation-iteration-count(1);
+                  }
                 }
                 left: -1263px;
                  @include respond-to($med) {
@@ -332,7 +352,8 @@
             }
             &.left{
                 background-image: url(../images/foreground_hill_l.png);
-                width: 181px;
+                width: 121px;
+                top: -200px;
             }
             &.right{
                 background-image: url(../images/foreground_hill_r.png);

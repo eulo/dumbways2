@@ -3258,3 +3258,44 @@ Copyright (c) 2014 Daniel Eden
   -webkit-animation-duration: 5s;
           animation-duration: 5s;
 }
+
+@-webkit-keyframes totracks {
+  0%, 39% {
+    -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg) translate3d(0,0,0);
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg) translate3d(0,0,0);
+  }
+
+  47%, 63% {
+    -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg) translate3d(-150px,0,0);
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg) translate3d(-150px,0,0);
+  }
+
+  78%, 80% {
+    -webkit-transform: scale3d(1.05, 1.05, 1) rotate3d(0, 0, 1, 0deg) translate3d(-150px,50px,0);
+            transform: scale3d(1.05, 1.05, 1) rotate3d(0, 0, 1, 0deg) translate3d(-150px,50px,0);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1.55, 1.55, 1) rotate3d(0, 0, 1, 0deg) translate3d(-500px,-200px,0);
+            transform: scale3d(1.55, 1.55, 1) rotate3d(0, 0, 1, 0deg) translate3d(-500px,-200px,0);
+  }
+}
+
+@keyframes totracks {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg) translate3d(0,0,0);
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg) translate3d(0,0,0);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1.05, 1.05, 1) rotate3d(0, 0, 1, 0deg) translate3d(0,60px,0);
+            transform: scale3d(1.05, 1.05, 1) rotate3d(0, 0, 1, 0deg) translate3d(0,60px,0);
+  }
+}
+
+.totracks {
+  -webkit-animation-name: totracks;
+          animation-name: totracks;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+}
