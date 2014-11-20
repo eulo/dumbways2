@@ -68,6 +68,10 @@ define(function(require,  exports, module) {
     });
   });
 
+  $('.pledge > span').click(function(event) {
+    event.preventDefault();
+  });
+
   $('.pledge > .bttn').click(function(event) {
     event.preventDefault();
     $(this).unbind('click');

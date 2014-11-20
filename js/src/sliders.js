@@ -11,10 +11,10 @@ define(function(require, exports, module) {
     $cont.find('.next, .prev').click(function(event) {
       event.preventDefault();
       var next = $(this).hasClass('next')
-        , i = next ? 1 : -1
+        , i = next ? -1 : 1
         , di = 0
         , l = $cont.find('li a').length
-        , s = next ? 1 : l;
+        , s = next ? l : 1;
 
       $cont.find('li a').each(function() {
         di = $(this).data('index') + i;

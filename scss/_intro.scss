@@ -154,8 +154,8 @@
                 cursor:pointer;
               }
               &.snake {
-                top:178px;
-                left:80px;
+                top:206px;
+                left:292px;
               }
               &.glue {
                 top: 170px;
@@ -234,6 +234,7 @@
                 display: block;
                 margin-left: 250px;
                 span {
+                  cursor:default;
                   padding-left:10px;
                   display:inline-block;
                   vertical-align:top;
