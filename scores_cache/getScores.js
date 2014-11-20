@@ -8,7 +8,7 @@ var url = "http://dumbways.millipede.com.au/leaderboard/"
   , finalData = []; 
 
 var writeToFile = function() {
-  fs.writeFile("./scores.js", finalData, function(err) {
+  fs.writeFile("./scores.js", finalData.join(''), function(err) {
     //JSON.stringify(json)
     if (err)
       console.log(err);
@@ -44,7 +44,7 @@ endpoints.forEach(function(el, i, arr) {
           , endPos = body.indexOf('})');
         json = body.substring(startPos+1, endPos+1);
         if (json.length)
-          finalData.push('var ' + el + ' = ' + json + '; ');
+          finalData.push('var ' + el + ' = ' + json + ';\n');
       }
       
       if (finalData.length === arr.length)

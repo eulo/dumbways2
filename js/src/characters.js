@@ -178,6 +178,8 @@ define(function(require, exports, module) {
                 // If end of animation, stop
                 if (pos + data.height >= data.maxHeight) {
                   clearInterval(interval);
+
+                  $this.removeClass(data.class);
                 }
 
               }, 1000 / data.fps);
