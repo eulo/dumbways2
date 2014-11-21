@@ -38,7 +38,7 @@ require(['config'], function() {
         }
       }
 
-      $('[data-analytics]').click(function(){
+      $('body').on('click', '[data-analytics]', function(){
         var a = $(this).data('analytics');
         _gaq.push(['_trackEvent', a[0], a[1], a[2]]);
       });
