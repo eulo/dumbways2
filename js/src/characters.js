@@ -10,7 +10,8 @@ define(function(require, exports, module) {
     var $this = $(this)
       , data = $this.data()
       , pos = 0
-      , dir = true;
+      , dir = true
+      , endEvent = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 
     if ($this.css('display') === 'none')
       return;
@@ -88,6 +89,7 @@ define(function(require, exports, module) {
               });
           }
 
+          // Bind death animation on click 
           if (data.framestall !== void 0) {
             $this.click(function(event) {
               $this.unbind('click');
@@ -120,6 +122,15 @@ define(function(require, exports, module) {
                 }
 
               }, 1000 / data.fps);
+            });
+
+          // if not framestall, but has click event
+          } else if (data.click !== void 0) {
+            $this.click(function(event) {
+              $this.addClass(data.click);
+              $this.one(endEvent, function(){
+                $this.removeClass(data.click);  
+              });
             });
           }
           // Animate css3
