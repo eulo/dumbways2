@@ -60,7 +60,7 @@ require(['config'], function() {
             $.each(data.top_scores, function(index, val) {
               var pic = "";
               if (val.facebook_id != null){
-                pic = "<span class='fb_pic' data-id='"+val.facebook_id+"'></span>";
+                pic = "<span class='fb_pic' data-id='"+val.facebook_id+"'><img src='images/meta/apple-touch-icon-60x60.png' width='30' height='30' /></span>";
               }else{
                 pic = "<img src='images/meta/apple-touch-icon-60x60.png' width='30' height='30' />"
               }
@@ -87,21 +87,23 @@ require(['config'], function() {
             $l.find('.fb_pic').each(function(i,v){
               var $t = $(this);
               /* make the API call */
-                FB.api(
-                    "/"+$t.data('id')+"/picture",
-                    {
-                        "redirect": false,
-                        "height": "60",
-                        "type": "normal",
-                        "width": "60"
-                    },
-                    function (response) {
-                      if (response && !response.error) {
-                        $t.replaceWith("<img src='"+response.data.url+"' width='30' height='30' />");
-                      }else{
+                if(window.fbLoaded){
+                  FB.api(
+                      "/"+$t.data('id')+"/picture",
+                      {
+                          "redirect": false,
+                          "height": "60",
+                          "type": "normal",
+                          "width": "60"
+                      },
+                      function (response) {
+                        if (response && !response.error) {
+                          $t.replaceWith("<img src='"+response.data.url+"' width='30' height='30' />");
+                        }else{
+                        }
                       }
-                    }
-                );
+                  );
+                }
             })
 
             
@@ -152,7 +154,7 @@ require(['config'], function() {
             $('.leaders').not('.big').fadeOut('fast');
             $('.leaders.big').html($('.'+$(this).data('ref')).html()).slideDown('slow', function() {
             });
-            $('.podium ol li').addClass('animated bounceInLeft');
+            $('.leaders.big ol li').addClass('animated bounceInLeft');
             $('.podium img').addClass('animated bounceInDown');
         });
       $(document).on('click','#leaderboard a.go_back',function(event) {
