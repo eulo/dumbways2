@@ -46,35 +46,6 @@ require(['config'], function() {
       data = $.parseJSON('{"top_scores":[{"name":"Sergio Mil\u00e1n","facebook_id":null,"score":"3299"},{"name":"Harunchai Paecharoenchai","facebook_id":null,"score":"2950"},{"name":"Julius Vet\u00e4m\u00e4j\u00e4rvi","facebook_id":"10204417397067101","score":"2763"},{"name":"Колмогоров","facebook_id":null,"score":"2668"},{"name":null,"facebook_id":null,"score":"2665"},{"name":null,"facebook_id":null,"score":"2634"},{"name":null,"facebook_id":null,"score":"2565"},{"name":null,"facebook_id":null,"score":"2564"},{"name":null,"facebook_id":null,"score":"2530"},{"name":null,"facebook_id":null,"score":"2500"},{"name":null,"facebook_id":null,"score":"2488"},{"name":null,"facebook_id":null,"score":"2463"},{"name":null,"facebook_id":null,"score":"2461"},{"name":null,"facebook_id":null,"score":"2456"},{"name":null,"facebook_id":null,"score":"2452"},{"name":null,"facebook_id":null,"score":"2411"},{"name":null,"facebook_id":null,"score":"2400"},{"name":null,"facebook_id":null,"score":"2395"},{"name":null,"facebook_id":null,"score":"2378"},{"name":null,"facebook_id":null,"score":"2368"},{"name":null,"facebook_id":null,"score":"2355"},{"name":null,"facebook_id":null,"score":"2353"},{"name":null,"facebook_id":null,"score":"2350"},{"name":null,"facebook_id":null,"score":"2348"},{"name":null,"facebook_id":null,"score":"2341"},{"name":null,"facebook_id":null,"score":"2323"},{"name":null,"facebook_id":null,"score":"2318"},{"name":"Patrick Trethowan","facebook_id":"10154692830720167","score":"2314"},{"name":null,"facebook_id":null,"score":"2310"},{"name":null,"facebook_id":null,"score":"2301"},{"name":null,"facebook_id":null,"score":"2300"},{"name":null,"facebook_id":null,"score":"2298"},{"name":null,"facebook_id":null,"score":"2287"},{"name":null,"facebook_id":null,"score":"2273"},{"name":null,"facebook_id":null,"score":"2270"},{"name":null,"facebook_id":null,"score":"2269"},{"name":null,"facebook_id":null,"score":"2265"},{"name":null,"facebook_id":null,"score":"2261"},{"name":null,"facebook_id":null,"score":"2261"},{"name":null,"facebook_id":null,"score":"2261"},{"name":null,"facebook_id":null,"score":"2261"},{"name":null,"facebook_id":null,"score":"2259"},{"name":null,"facebook_id":null,"score":"2252"},{"name":"Nicol\u00e1s Pombo","facebook_id":"10204490688740231","score":"2251"},{"name":null,"facebook_id":null,"score":"2245"},{"name":null,"facebook_id":null,"score":"2244"},{"name":null,"facebook_id":null,"score":"2233"},{"name":null,"facebook_id":null,"score":"2218"},{"name":null,"facebook_id":null,"score":"2213"},{"name":null,"facebook_id":null,"score":"2209"}]}')
       
 
-      // function scores(url){
-      //   $.ajax({
-      //     dataType: "jsonp",
-      //     url: "https://dumbways.millipede.com.au/leaderboard/"+url+"/",
-      //     jsonpCallback: "scoresCallback",
-      //     success: function ( data ) {
-      //       var leaders = "<ol>";
-
-      //       $.each(data.top_scores, function(index, val) {
-      //         var name = (val.name != null) ? val.name : "......" ;
-      //         leaders += "<li><span class='name'>"+name+"</span> <span class='right'>"+val.score+"</span></li>";
-      //         if(index >= 3){
-      //           leaders += "<li class='hidden'><span class='name'>"+name+"</span> <span class='right'>"+val.score+"</span></li>";
-      //         }
-      //         if(index == 11){
-      //           return false;
-      //         }
-      //       });
-      //       leaders += "</ol>"
-
-      //       $('#leaderboard .content .'+url+' span').replaceWith(leaders);
-      //     },
-      //     error: function (XMLHttpRequest, textStatus, errorThrown) {
-      //          console.log(textStatus, errorThrown);
-      //     }
-
-      //   });
-      // };
-      var dt = [];
 
       function scores( data , url ) {
             if(data.error){
@@ -93,8 +64,8 @@ require(['config'], function() {
               }
               var name = (val.name != null) ? val.name : "Unknown" ;
 
-              if(index >= 4){
-                leaders += "<li class='hidden'><span class='name'>"+name+"</span> <span class='right'>"+val.score+"</span></li>";
+              if(index >= 3){
+                leaders += "<li class='hide'><span class='name'>"+pic+name+"</span> <span class='right'>"+val.score+"</span></li>";
               }else{
                 leaders += "<li><span class='name'>"+pic+name+"</span> <span class='right'>"+val.score+"</span></li>";
               }
@@ -103,7 +74,7 @@ require(['config'], function() {
               }
             });
             leaders += "</ol>";
-            leaders += '<a href="#" class="show_more">VIEW MORE</a>';
+            leaders += '<a href="#" data-ref="'+url+'" class="show_more">VIEW MORE</a><a href="#" class="go_back" >GO BACK</a>';
 
             $l = $(leaders);
 
@@ -127,10 +98,17 @@ require(['config'], function() {
                 );
             })
 
+            
+
             $('#leaderboard .content .'+url+' span').replaceWith($l);
 
           }
-      setTimeout(function(){
+          w = window.location.href;
+          leaders = (w.indexOf('?leaders') > 0) ? true : false;
+
+      if(leaders){
+          $('.leaders').not('.big').show();
+          $('#leaderboard .coming_soon').hide();
 
           if(typeof freezerville !== "undefined"){
             scores(freezerville, "freezerville");
@@ -162,7 +140,20 @@ require(['config'], function() {
           //   scores({"error":true},"adrenaland");
           // }
 
-      },5000)
+      }
+      $(document).on('click','#leaderboard a.show_more',function(event) {
+            event.preventDefault()
+            $('.leaders').not('.big').fadeOut('fast');
+            $('.leaders.big').html($('.'+$(this).data('ref')).html()).slideDown('slow', function() {
+            });;
+        });
+      $(document).on('click','#leaderboard a.go_back',function(event) {
+            event.preventDefault()
+            
+            $('.leaders.big').slideUp('slow', function() {
+            $('.leaders').not('.big').fadeIn('fast'); 
+            });;
+        });
       // scores("drowntown");
       // scores("dumbest");
       // scores("dumbdome");
