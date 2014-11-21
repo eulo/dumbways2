@@ -185,7 +185,7 @@
 					display: none;
 					width: 100%;
 					float: none;
-					overflow: hidden;
+					
 					.podium {
 						display: block;
 						width: 400px;
@@ -217,6 +217,7 @@
 								@include vendor-prefix(animation-delay, .5s)
 							}
 						}
+
 					}
 					h3{
 						font-size: em(54);
@@ -227,7 +228,15 @@
 					li{
 						font-size: em(32);
 						line-height: 50px;
-
+						&:nth-child(1){
+							color: gold;
+						}
+						&:nth-child(2){
+							color: silver;
+						}
+						&:nth-child(3){
+							color: #a96335;
+						}
 					}
 					a.go_back{
 				        width: 110px;
