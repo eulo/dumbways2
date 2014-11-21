@@ -274,6 +274,21 @@ $bold : CooperBT-Bold, Georgia, Times, "Times New Roman", serif;
   @return #{$pixels/$context}em
 }
 
+  @mixin list_delay(){
+    $i: 10;
+    @while $i > 0 {
+      li:nth-child(#{$i}) { @include vendor-prefix(animation-delay, $i / 8 + s); }
+      $i: $i - 1;
+    }
+  }
+ //    $types: 10;
+
+ //    @while $types > 0
+ //      li:nth-child(#{$types})
+ //        @include vendor-prefix(animation-delay, $types)
+ //      $types: $types - 1;
+ // }
+
 /**
  * mixin for buttons
  */
