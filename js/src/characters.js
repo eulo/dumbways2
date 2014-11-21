@@ -16,11 +16,7 @@ define(function(require, exports, module) {
     if ($this.css('display') === 'none')
       return;
 
-    $this.css({
-      'background-image': 'url(' + data.file + ')',
-      'width': data.width + 'px',
-      'height': data.height + 'px' 
-    });
+    $this.addClass('fade-in'); 
 
     if (data.animate === false) {
       return;
@@ -31,6 +27,15 @@ define(function(require, exports, module) {
 
     var img = new Image();
     img.onload = function() {
+      // default init styles
+      $this.css({
+        'background-image': 'url(' + data.file + ')',
+        'width': data.width + 'px',
+        'height': data.height + 'px' 
+      });
+      $this.removeClass('fade-in'); 
+
+      // if json exists, use for animation sequence
       if (data.json) {
         // json data
         $.get(data.json).done(function(res) {
