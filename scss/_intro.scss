@@ -1,9 +1,12 @@
 #intro{
     max-width: 1600px;
-    background: url(../images/bg_clouds.png) no-repeat fixed center top #96d2f9;
+    background: url(../images/bg_clouds.png) fixed center top #96d2f9;
+    background-repeat: repeat-x;
     background-size: 100% auto;
     min-height: 800px;
     position: relative;
+    //@include vendor-prefix('transition', 'background-position 60000ms linear');
+    
     @include respond-to($desktop) {
       min-height: 727px;
     }

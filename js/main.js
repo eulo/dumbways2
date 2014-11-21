@@ -13,6 +13,7 @@ require(['config'], function() {
       setInterval(showtime,500);
       setInterval(showtime,900);
       setInterval(showtime,1100);
+      //clouds
 
       var flash_count = 0;
       function showtime(){

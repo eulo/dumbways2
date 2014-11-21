@@ -3380,3 +3380,29 @@ Copyright (c) 2014 Daniel Eden
   -webkit-animation-duration: 6s;
           animation-duration: 6s;
 }
+
+@-webkit-keyframes clouds {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position:100vw 0; 
+  }
+}
+
+@keyframes clouds {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position:100vw 0; 
+  }
+}
+
+.clouds {
+  -webkit-animation-name: clouds;
+          animation-name: clouds;
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+}
+
