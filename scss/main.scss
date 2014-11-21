@@ -392,7 +392,7 @@ $bold : CooperBT-Bold, Georgia, Times, "Times New Roman", serif;
 
 .character {
   position: absolute;
-  &[data-framestall] {
+  &[data-framestall], &[data-click] {
     cursor:pointer;
   }
 }
@@ -439,22 +439,24 @@ body{
             }
         }
         .social{
-            .soc{
-                width: 26px;
-                height: 26px;
-                margin: 15px 2px 0;
-                display: inline-block;
-                background: url(../images/social-icons.png) no-repeat;
-                &.yt{
-                    background-position: top left;
-                }
-                &.fb{
-                    background-position: top center;
-                }
-                &.tb{
-                    background-position: top right;
-                }
+          padding-right:10px;
+
+          .soc{
+            width: 26px;
+            height: 26px;
+            margin: 15px 2px 0;
+            display: inline-block;
+            background: url(../images/social-icons.png) no-repeat;
+            &.yt{
+              background-position: top left;
             }
+            &.fb{
+              background-position: top center;
+            }
+            &.tb{
+              background-position: top right;
+            }
+          }
         }
     }
     a.prev,

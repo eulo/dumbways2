@@ -133,23 +133,43 @@
             @include respond-to($med) {
                 @include scale_bg(465,284,.5);
             }
+            .powerpoint {
+              width:15px;
+              height:23px;
+              background:url(../images/powerpoint.png) no-repeat;
+              position: absolute;
+              top: 257px;
+              left: 376px;
+              @include respond-to($desktop) {
+                  top: 220px;
+                  left: 340px;
+              }
+              @include respond-to($med) {
+                display:none;
+              }
+            }
             .character {
               position: absolute;
               &[data-framestall] {
                 cursor:pointer;
               }
               &.snake {
-                top:178px;
-                left:80px;
+                top:206px;
+                left:292px;
+                @include respond-to($desktop) {
+                  top: 182px;
+                  left:257px;
+                }
               }
               &.glue {
                 top: 170px;
                 left: -40px;
                 @include respond-to($desktop) {
-                    top:150px;
+                  top:138px;
+                  left:40px;
                 }
                 @include respond-to($large) {
-                  left:40px;
+                  left:-130px;
                   top:140px;
                 }
               }
@@ -158,7 +178,7 @@
                 left:380px;
                 @include respond-to($desktop) {
                     top:123px;
-                    left: 342px;
+                    left: 344px;
                 }
               }
               &.medicine {
@@ -218,6 +238,7 @@
                 display: block;
                 margin-left: 250px;
                 span {
+                  cursor:default;
                   padding-left:10px;
                   display:inline-block;
                   vertical-align:top;

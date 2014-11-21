@@ -10,7 +10,8 @@ define(function(require, exports, module) {
     var $this = $(this)
       , data = $this.data()
       , pos = 0
-      , dir = true;
+      , dir = true
+      , endEvent = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 
     if ($this.css('display') === 'none')
       return;
@@ -88,10 +89,11 @@ define(function(require, exports, module) {
               });
           }
 
+          // Bind death animation on click 
           if (data.framestall !== void 0) {
             $this.click(function(event) {
               $this.unbind('click');
-              var stime = new Date();
+              //var stime = new Date();
               clearInterval(interval);
               // Add onclick css3 animation
               if (data.click !== void 0)
@@ -112,13 +114,23 @@ define(function(require, exports, module) {
                 }
                 // Check to see if animation as finished
                 if (++i >= l) {
-                  console.log(new Date() - stime);
+                  //console.log(new Date() - stime);
                   clearInterval(interval);
+                  $this.removeClass(data.class);
                   if (data.callback !== void 0)
                     $this.addClass(data.callback);
                 }
 
               }, 1000 / data.fps);
+            });
+
+          // if not framestall, but has click event
+          } else if (data.click !== void 0) {
+            $this.click(function(event) {
+              $this.addClass(data.click);
+              $this.one(endEvent, function(){
+                $this.removeClass(data.click);  
+              });
             });
           }
           // Animate css3

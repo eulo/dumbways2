@@ -5,7 +5,7 @@ var fs = require('fs');
 
 var url = "http://dumbways.millipede.com.au/leaderboard/"
   , endpoints = ['freezerville', 'drowntown', 'dumbest', 'dumbdome']
-  , finalData = []; 
+  , finalData = ["/* Compiled at: " + new Date() + "*/\n"]; 
 
 var writeToFile = function() {
   fs.writeFile("./scores.js", finalData.join(''), function(err) {
