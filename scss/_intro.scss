@@ -1,6 +1,6 @@
 #intro{
     max-width: 1600px;
-    background: url(../images/bg_clouds.png) fixed center top #96d2f9;
+    background: url(../images/bg_clouds.png) fixed center 300px #96d2f9;
     background-repeat: repeat-x;
     background-size: 100% auto;
     min-height: 800px;
@@ -20,10 +20,47 @@
         display: none;
       }
     }
+
+    .character {
+      &.spaceman {
+        left: 50%;
+        margin-left: 140px;
+        z-index:5;
+        top: -50px;
+        .helmet {
+          background:url(../images/characters/helmet.png) no-repeat;
+          width:60px;
+          height:51px;
+          position:absolute;
+          top: 96px;
+          left: 40px;
+        }
+        .cable {
+          background:url(../images/characters/spaceCord.png) no-repeat;
+          width:266px;
+          height:344px;
+          position:absolute;
+          top: -160px;
+          left: 80px;
+        }
+        .eyeball {
+          top:100px;
+          left: 55px;
+          &.flip {
+            -webkit-transform: rotate3d(0, 0, 1, 140deg);
+                    transform: rotate3d(0, 0, 1, 140deg);
+            left: 75px;
+            top: 120px;
+          }
+        }
+      }
+    }
+
+
     .mountain_bg{
       max-width: 1600px;
       width: 100%;
-      top: 200px;
+      top: 500px;
       position: absolute;
       .left{
         background: url(../images/bg_mountains_left.png);

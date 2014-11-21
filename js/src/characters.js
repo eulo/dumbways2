@@ -203,6 +203,8 @@ define(function(require, exports, module) {
                   clearInterval(interval);
 
                   $this.removeClass(data.class);
+                  if (data.callback !== void 0)
+                    $this.addClass(data.callback);
                 }
 
               }, 1000 / data.fps);

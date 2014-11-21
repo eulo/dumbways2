@@ -398,8 +398,9 @@ $bold : CooperBT-Bold, Georgia, Times, "Times New Roman", serif;
   &[data-framestall], &[data-click] {
     cursor:pointer;
   }
-  &.fade-in {
+  &.fade-in, &.fade-in > div {
     opacity: 0;
+
   }
 }
 
