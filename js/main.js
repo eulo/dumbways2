@@ -13,6 +13,7 @@ require(['config'], function() {
       setInterval(showtime,500);
       setInterval(showtime,900);
       setInterval(showtime,1100);
+      //clouds
 
       var flash_count = 0;
       function showtime(){
@@ -37,7 +38,7 @@ require(['config'], function() {
         }
       }
 
-      $('[data-analytics]').click(function(){
+      $('body').on('click', '[data-analytics]', function(){
         var a = $(this).data('analytics');
         _gaq.push(['_trackEvent', a[0], a[1], a[2]]);
       });

@@ -8,6 +8,39 @@ define(function(require, exports, module) {
   var $wallpaperSlider = $('.dl_slideshow.wallpapers');
 
   var videoSlider = function($cont, $player) {
+    // Get videos from youtubez
+    var channelId = 'UC7lZ_iOz3NhA6krGfILerQA'
+      , APIkey = 'AIzaSyA9kAtDyW3lzwCIBYIUjnGXITtw2fDdDVY'
+      , feature = 'IJNR2EpS0jw'
+      , $list = $cont.find('ul')
+      , $li, $a, vidC = 0;
+    // Output vid func
+    var outputVideo = function(id) {
+      $li = $('<li></li>')
+      $a = $('<a href="#"></a>');
+      $a.attr('data-analytics', '["video", "play", "video ' +(++vidC)+ '"]'); 
+      $a.attr('data-video', id);
+      $a.attr('data-index', vidC);
+      $a.append('<img src="http://img.youtube.com/vi/' + id + '/hqdefault.jpg">');
+      $li.append($a);
+      $list.append($li);
+    }; 
+    // Make sure feature is always first
+    outputVideo(feature);
+
+    $.get('https://www.googleapis.com/youtube/v3/search?key='+APIkey+'&channelId='+channelId+'&part=snippet,id&order=date&maxResults=20')
+    .done(function(res) {
+      if (res.items === void 0)
+        return;
+      
+      for (var i = 0, l = res.items.length; i < l; i++) {
+        if (res.items[i].id.videoId !== void 0 && res.items[i].id.videoId !== feature)
+          outputVideo(res.items[i].id.videoId);   
+      }
+      $list.find('li a').first().addClass('active');
+    });
+
+    // Bind video carousel nav
     $cont.find('.next, .prev').click(function(event) {
       event.preventDefault();
       var next = $(this).hasClass('next')
@@ -29,8 +62,8 @@ define(function(require, exports, module) {
       });
 
     });
-
-    $cont.find('li a').click(function(event) {
+    // Play videos onclick
+    $cont.on('click', 'li a', function(event) {
       event.preventDefault();
       var url = "//www.youtube.com/embed/"+$(this).data('video')+"?rel=0&amp;controls=1&amp;showinfo=0&amp;autoplay=1"
       $("#vidplayer iframe").attr('src',url);
