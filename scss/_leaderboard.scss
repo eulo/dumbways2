@@ -76,6 +76,14 @@
 			max-width: 1024px;
 			margin: 0 auto;
 			margin-top: -100px;
+			@include respond-to($desktop) {
+				font-size: 10px;
+				max-width: 900px;
+			}
+			@include respond-to($large) {
+				font-size: 10px;
+				max-width: 680px;
+			}
 			@include respond-to($med) {
 				font-size: 10px;
 				max-width: 300px;
@@ -125,11 +133,11 @@
 				float: left;
 				margin-top: 40px;
 				min-height: 282px;
-				//display: none;
+				display: none;
 				@include respond-to($med) {
 					width: 96%;
 				}
-				
+
 				h3{
 					// text-transform: uppercase;
 				}
@@ -147,7 +155,7 @@
 							margin-right: 10px;
 							border-radius: 5px;
 						}
-						&.hidden{
+						&.hide{
 							display: none;
 						}
 					}
@@ -167,6 +175,43 @@
 			        margin-top: 20px;
 					@include share_button(#ffc228,#ffe273);
 				}
+				a.go_back{
+					display: none;
+				}
+				&.big{
+					display: none;
+					width: 100%;
+					float: none;
+					h3{
+						font-size: em(54);
+					}
+					.hide{
+						display: list-item;
+					}
+					li{
+						font-size: em(32);
+						line-height: 50px;
+
+					}
+					a.go_back{
+				        width: 110px;
+				        height:26px;
+				        display: block;
+				        line-height: 30px;
+				        border-radius: 14px;
+				        display: block;
+				        padding: 0 14px;
+				        margin: 0 auto;
+				        color: #ffffff;
+				        text-decoration: none;
+				        margin-top: 20px;
+						@include share_button(#ffc228,#ffe273);
+					}
+					a.show_more{
+						display: none;
+					}
+				}
+
 			}
 		}
 		.bottom{
