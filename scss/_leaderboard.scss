@@ -178,10 +178,46 @@
 				a.go_back{
 					display: none;
 				}
+				.podium {
+					display: none;
+				}
 				&.big{
 					display: none;
 					width: 100%;
 					float: none;
+					overflow: hidden;
+					.podium {
+						display: block;
+						width: 400px;
+						height: 150px;
+						position: relative;
+						background: url(../images/winner_podium.png) no-repeat center bottom;
+						margin: 0 auto 60px;
+						background-size: 100% auto;
+						img{
+							width: 60px;
+							height: 60px;
+							border-radius: 10px;
+							position: absolute;
+							&:nth-child(1){
+								left:50%;
+								top:-15px;
+								margin-left: -30px;
+							}
+							&:nth-child(2){
+								left:83.3333%;
+								top:20px;
+								margin-left: -30px;
+								@include vendor-prefix(animation-delay, .25s)
+							}
+							&:nth-child(3){
+								left:16.666%;
+								top:40px;
+								margin-left: -30px;
+								@include vendor-prefix(animation-delay, .5s)
+							}
+						}
+					}
 					h3{
 						font-size: em(54);
 					}
@@ -209,6 +245,15 @@
 					}
 					a.show_more{
 						display: none;
+					}
+					@include respond-to($med) {
+						h3{
+							font-size: em(48);
+						}
+						width: 96%;
+						li{
+							font-size: em(24);
+						}
 					}
 				}
 

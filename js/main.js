@@ -53,6 +53,7 @@ require(['config'], function() {
               $('#leaderboard .content .'+url+' span').html("Error fetching data");
               return false;
             }
+            var podium = "<div class='podium'>";
 
             var leaders = "<ol>";
 
@@ -68,15 +69,19 @@ require(['config'], function() {
               if(index >= 3){
                 leaders += "<li class='hide'><span class='name'>"+pic+name+"</span> <span class='right'>"+val.score+"</span></li>";
               }else{
+                podium += pic;
                 leaders += "<li><span class='name'>"+pic+name+"</span> <span class='right'>"+val.score+"</span></li>";
               }
-              if(index == 11){
+              if(index == 9){
                 return false;
               }
             });
+            podium += "</div>"
+
             leaders += "</ol>";
             leaders += '<a href="#" data-ref="'+url+'" class="show_more">VIEW MORE</a><a href="#" class="go_back" >GO BACK</a>';
 
+            leaders = podium+leaders;
             $l = $(leaders);
 
             $l.find('.fb_pic').each(function(i,v){
@@ -146,7 +151,9 @@ require(['config'], function() {
             event.preventDefault()
             $('.leaders').not('.big').fadeOut('fast');
             $('.leaders.big').html($('.'+$(this).data('ref')).html()).slideDown('slow', function() {
-            });;
+            });
+            $('.podium ol li').addClass('animated bounceInLeft');
+            $('.podium img').addClass('animated bounceInDown');
         });
       $(document).on('click','#leaderboard a.go_back',function(event) {
             event.preventDefault()
