@@ -91,29 +91,55 @@
             height: 630px;
         }
         .download_lockup{
-            background: url(../images/games-logo.png) no-repeat top left;
-            padding-top: 100px;
+            // background: url(../images/games-logo.png) no-repeat top left;
+            // padding-top: 100px;
             background-size: 144px auto;
-            width: 300px;
+            width: 638px;
             margin: 0 auto;
             position: relative;
             z-index: 100;
-            margin-top: 60px;
+            margin-top: -60px;
+            text-align: center;
+            .top{
+              a{
+                margin: 0;
+                padding: 0;
+              }
+              img{
+                vertical-align: bottom;
+                @include respond-to($large) {
+                  width: 82px;
+                }
+                @include respond-to($med) {
+                  width: 70px;
+                }
+                &.text{
+                  @include respond-to($large) {
+                    width: 169px;
+                  }
+                  
+                }
+              }
+            }
+            p{
+              font-size: em(13);
+            }
             @include respond-to($desktop) {
-                margin-top: 40px;
+                margin-top: -40px;
 
             }
             @include respond-to($large) {
-                margin-top: 10px;
-                width: 240px;
+                margin-top: -30px;
+                width: 345px;
             }
             @include respond-to($med) {
-                margin-top: 40px;
+                margin-top: -30px;
+                margin-left: -10px;
             }
             .applinks{
-                width: 200px;
+                width: 300px;
                 .app_dl{
-                    width: 200px;
+                    width: 300px;
                 }
                 .app_dl_link{
                     margin-top: 0;
