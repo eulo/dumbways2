@@ -11,7 +11,8 @@ define(function(require, exports, module) {
     // Get videos from youtubez
     var channelId = 'UC7lZ_iOz3NhA6krGfILerQA'
       , APIkey = 'AIzaSyA9kAtDyW3lzwCIBYIUjnGXITtw2fDdDVY'
-      , feature = 'IJNR2EpS0jw'
+      //, feature = 'IJNR2EpS0jw'
+      , feature = 'eq-GYfRjxhM'
       , $list = $cont.find('ul')
       , $li, $a, vidC = 0;
     // Output vid func
