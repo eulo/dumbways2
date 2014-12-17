@@ -7,9 +7,10 @@
     background: url(../images/videos_bg.png) no-repeat center 260px #95be57;
     position:relative;
     @include respond-to($med) {
+      background: url(../images/videos_bg.png) no-repeat center 60px #95be57;
       background-size: 800px auto;
       min-height: 660px;
-      padding-top: 100px;
+      padding-top: 140px;
     }
 
     .character {
